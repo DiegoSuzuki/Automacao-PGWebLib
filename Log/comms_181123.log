@@ -2325,3 +2325,20 @@
 19:42:23:237 DISCONNECT =================================================================
 19:42:23:237 >>LNXSSL_iModemDisconnect
 19:42:23:237 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+20:09:43:420 PW_Init(.)
+20:09:43:420 Ultima limpeza: 23/11/2018 16:50:26)
+20:09:43:423 PW_iNewTransac(1, 0004.0000.0064.0000)
+20:09:43:427 DISCONNECT =================================================================
+20:09:43:427 >>LNXSSL_iModemDisconnect
+20:09:43:433 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+20:09:43:434 PW_iAddParam(22, 1.1.0.0)
+20:09:43:434 PW_iAddParam(21, PGWEBLIBTEST)
+20:09:43:434 PW_iAddParam(36, 15)
+20:09:43:434 PW_iAddParam(246, PGWEBLIBTEST)
+20:09:43:434 PW_iAddParam(17, 54403)
+20:09:43:601 PW_iAddParam(27, app.tpgw.ntk.com.br:17502)
+20:09:43:784 PW_iAddParam(246, 314159)
+20:09:43:784 PW_iAddParam(32513, 1)
+20:09:44:231 DISCONNECT =================================================================
+20:09:44:231 >>LNXSSL_iModemDisconnect
+20:09:44:231 PW_iExecTransac(0004.0000.0064.0000) <-2497>
