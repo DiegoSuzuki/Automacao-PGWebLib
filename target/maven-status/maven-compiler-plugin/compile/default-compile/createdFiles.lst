@@ -1,0 +1,12 @@
+LibIntegrada.class
+Enums/PWDAT.class
+Enums/PWCNF.class
+Interfaces/InterfaceComPGWebLib.class
+Estruturas/PW_Menu.class
+Estruturas/StringByReference.class
+Principal.class
+Enums/PWRET.class
+Estruturas/PW_GetData.class
+Enums/PWINFO.class
+ChamarFuncoes.class
+Enums/PWOPER.class
