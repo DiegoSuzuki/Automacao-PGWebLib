@@ -6,116 +6,89 @@ import java.util.List;
 
 public class PW_Menu extends Structure {
 
-    public String szTexto1;
-    public String szTexto2;
-    public String szTexto3;
-    public String szTexto4;
-    public String szTexto5;
-    public String szTexto6;
-    public String szTexto7;
-    public String szTexto8;
-    public String szTexto9;
-    public String szTexto10;
-    public String szTexto11;
-    public String szTexto12;
-    public String szTexto13;
-    public String szTexto14;
-    public String szTexto15;
-    public String szTexto16;
-    public String szTexto17;
-    public String szTexto18;
-    public String szTexto19;
-    public String szTexto20;
-    public String szTexto21;
-    public String szTexto22;
-    public String szTexto23;
-    public String szTexto24;
-    public String szTexto25;
-    public String szTexto26;
-    public String szTexto27;
-    public String szTexto28;
-    public String szTexto29;
-    public String szTexto30;
-    public String szTexto31;
-    public String szTexto32;
-    public String szTexto33;
-    public String szTexto34;
-    public String szTexto35;
-    public String szTexto36;
-    public String szTexto37;
-    public String szTexto38;
-    public String szTexto39;
-    public String szTexto40;
-    public String szValor1;
-    public String szValor2;
-    public String szValor3;
-    public String szValor4;
-    public String szValor5;
-    public String szValor6;
-    public String szValor7;
-    public String szValor8;
-    public String szValor9;
-    public String szValor10;
-    public String szValor11;
-    public String szValor12;
-    public String szValor13;
-    public String szValor14;
-    public String szValor15;
-    public String szValor16;
-    public String szValor17;
-    public String szValor18;
-    public String szValor19;
-    public String szValor20;
-    public String szValor21;
-    public String szValor22;
-    public String szValor23;
-    public String szValor24;
-    public String szValor25;
-    public String szValor26;
-    public String szValor27;
-    public String szValor28;
-    public String szValor29;
-    public String szValor30;
-    public String szValor31;
-    public String szValor32;
-    public String szValor33;
-    public String szValor34;
-    public String szValor35;
-    public String szValor36;
-    public String szValor37;
-    public String szValor38;
-    public String szValor39;
-    public String szValor40;
+    public StringByReference szTexto1;
+    public StringByReference szTexto2;
+    public StringByReference szTexto3;
+    public StringByReference szTexto4;
+    public StringByReference szTexto5;
+    public StringByReference szTexto6;
+    public StringByReference szTexto7;
+    public StringByReference szTexto8;
+    public StringByReference szTexto9;
+    public StringByReference szTexto10;
+    public StringByReference szTexto11;
+    public StringByReference szTexto12;
+    public StringByReference szTexto13;
+    public StringByReference szTexto14;
+    public StringByReference szTexto15;
+    public StringByReference szTexto16;
+    public StringByReference szTexto17;
+    public StringByReference szTexto18;
+    public StringByReference szTexto19;
+    public StringByReference szTexto20;
+    public StringByReference szTexto21;
+    public StringByReference szTexto22;
+    public StringByReference szTexto23;
+    public StringByReference szTexto24;
+    public StringByReference szTexto25;
+    public StringByReference szTexto26;
+    public StringByReference szTexto27;
+    public StringByReference szTexto28;
+    public StringByReference szTexto29;
+    public StringByReference szTexto30;
+    public StringByReference szTexto31;
+    public StringByReference szTexto32;
+    public StringByReference szTexto33;
+    public StringByReference szTexto34;
+    public StringByReference szTexto35;
+    public StringByReference szTexto36;
+    public StringByReference szTexto37;
+    public StringByReference szTexto38;
+    public StringByReference szTexto39;
+    public StringByReference szTexto40;
+    public StringByReference szValor1;
+    public StringByReference szValor2;
+    public StringByReference szValor3;
+    public StringByReference szValor4;
+    public StringByReference szValor5;
+    public StringByReference szValor6;
+    public StringByReference szValor7;
+    public StringByReference szValor8;
+    public StringByReference szValor9;
+    public StringByReference szValor10;
+    public StringByReference szValor11;
+    public StringByReference szValor12;
+    public StringByReference szValor13;
+    public StringByReference szValor14;
+    public StringByReference szValor15;
+    public StringByReference szValor16;
+    public StringByReference szValor17;
+    public StringByReference szValor18;
+    public StringByReference szValor19;
+    public StringByReference szValor20;
+    public StringByReference szValor21;
+    public StringByReference szValor22;
+    public StringByReference szValor23;
+    public StringByReference szValor24;
+    public StringByReference szValor25;
+    public StringByReference szValor26;
+    public StringByReference szValor27;
+    public StringByReference szValor28;
+    public StringByReference szValor29;
+    public StringByReference szValor30;
+    public StringByReference szValor31;
+    public StringByReference szValor32;
+    public StringByReference szValor33;
+    public StringByReference szValor34;
+    public StringByReference szValor35;
+    public StringByReference szValor36;
+    public StringByReference szValor37;
+    public StringByReference szValor38;
+    public StringByReference szValor39;
+    public StringByReference szValor40;
 
-    public PW_Menu(){}
+    public PW_Menu(){ }
 
-    //construtores do structure
-    public PW_Menu(Pointer pointer) {
-        super(pointer);
-    }
-
-    public static class ByReference extends PW_Menu implements Structure.ByReference {
-        public ByReference() {
-        }
-
-        public ByReference(Pointer p) {
-            super(p);
-            read();
-        }
-
-    }
-
-    public static class ByValue extends PW_Menu implements Structure.ByValue {
-        public ByValue() {
-        }
-
-        public ByValue(Pointer p) {
-            super(p);
-            read();
-        }
-
-    }
-    //fim dos construtores
 
     @Override
     protected List<String> getFieldOrder() {

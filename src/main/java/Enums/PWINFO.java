@@ -85,10 +85,10 @@ public enum PWINFO {
     MERCHADDDATA3 ((short)0xF2),
     MERCHADDDATA4 ((short)0xF3),
     RCPTPRN ((short)0xF4),
-    AUTHMNGTUSER ((short)0xF5),
-    AUTHTECHUSER ((short)0xF6), //246
+    AUTHMNGTUSER (245),
+    AUTHTECHUSER (246), //246
     PAYMNTTYPE ((short)0x1F21),
-    USINGPINPAD ((short)0x7F01),
+    USINGPINPAD (32513),
     PPCOMMPORT ((short)0x7F02),
     IDLEPROCTIME ((short)0x7F04),
     PNDAUTHSYST ((short)0x7F05),

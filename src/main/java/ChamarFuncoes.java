@@ -3,6 +3,7 @@ import Enums.PWOPER;
 import Enums.PWRET;
 import Estruturas.PW_GetData;
 import com.sun.jna.Pointer;
+import com.sun.jna.ptr.PointerByReference;
 
 
 public class ChamarFuncoes {
@@ -24,6 +25,10 @@ public class ChamarFuncoes {
         return convertStringError(pw_iAddParam);
     }
 
+    public static String chamarPW_iAddParam(PWINFO wParam, int pszValue){
+        int pw_iAddParam = libIntegrada.chamarPW_iAddParam(wParam, pszValue);
+        return convertStringError(pw_iAddParam);
+    }
 
     public static void addMandatoryParams(){
         chamarPW_iAddParam(PWINFO.AUTDEV,"SETIS AUTOMACAO E SISTEMA LTDA");
@@ -33,8 +38,8 @@ public class ChamarFuncoes {
         chamarPW_iAddParam(PWINFO.AUTHTECHUSER,"PGWEBLIBTEST");
     }
 
-    public static String chamarPW_iExecTransac(PW_GetData vstParam[], Pointer iNumParam) {
-        int pw_iExecTransac = libIntegrada.chamarPW_iExecTransac(vstParam, iNumParam);
+    public static String chamarPW_iExecTransac(PW_GetData.ByReference [] vstParam, ShortByPointer iNUmParam) {
+       int pw_iExecTransac = libIntegrada.chamarPW_iExecTransac(vstParam, iNUmParam);
         return convertStringError(pw_iExecTransac);
     }
 

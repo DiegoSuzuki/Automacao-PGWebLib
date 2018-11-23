@@ -2,7 +2,8 @@ import Enums.PWINFO;
 import Enums.PWOPER;
 import Estruturas.PW_GetData;
 import Interfaces.InterfaceComPGWebLib;
-import com.sun.jna.Pointer;
+import com.sun.jna.ptr.PointerByReference;
+
 
 
 public class LibIntegrada {
@@ -23,13 +24,11 @@ public class LibIntegrada {
         return pgWebLib.PW_iAddParam(wParam.getValor(),pszValue);
     }
 
-    public int chamarPW_iExecTransac(PW_GetData vstParam[], Pointer iNumParam) {
+    public int chamarPW_iAddParam (PWINFO wParam, int pszValue){
+        return pgWebLib.PW_iAddParam(wParam.getValor(),pszValue);
+    }
 
-        Pointer pointers[] = new Pointer[vstParam.length];
-
-        for (int i = 0; i < pointers.length; i++)
-            pointers[i] = vstParam[i].getPointer();
-
-        return pgWebLib.PW_iExecTransac(pointers, iNumParam);
+    public int chamarPW_iExecTransac(PW_GetData.ByReference vstParam [], ShortByPointer iNumParam) {
+        return pgWebLib.PW_iExecTransac(vstParam, iNumParam.getPointer());
     }
 }

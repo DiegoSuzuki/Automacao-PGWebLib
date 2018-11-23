@@ -1,108 +1,81 @@
 package Estruturas;
-import com.sun.jna.Pointer;
+
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.ByteByReference;
+import com.sun.jna.ptr.IntByReference;
 import java.util.Arrays;
 import java.util.List;
 
 public class PW_GetData extends Structure {
 
-    public byte bTipoDeDado;
     public short wIdentificador;
+    public byte bTipoDeDado;
     public String szPrompt;
-    public byte bNumOpcoesMenu;
-    public PW_Menu stMenu = new PW_Menu();
-    public String szMascaraDeCaptura;
-    public byte bTiposEntradaPermitidos;
-    public byte bTamanhoMinimo;
-    public byte bTamanhoMaximo;
-    public int ulValorMinimo;
-    public int ulValorMaximo;
-    public byte bOcultarDadosDigitados;
-    public byte bValidacaoDado;
-    public byte bAceitaNulo;
-    public String szValorInicial;
-    public byte bTeclasDeAtalho;
-    public String szMsgValidacao;
-    public String szMsgConfirmacao;
-    public String szMsgDadoMaior;
-    public String szMsgDadoMenor;
-    public byte bCapturarDataVencCartao ;
-    public int ulTipoEntradaCartao;
-    public byte bItemInicial;
-    public byte bNumeroCapturas;
-    public String szMsgPrevia;
-    public byte bTipoEntradaCodigoBarras;
-    public byte bOmiteMsgAlerta;
-    public byte bIniciaPelaEsquerda;
-    public byte bNotificarCancelamento;
+    public ByteByReference bNumOpcoesMenu;
+    public PW_Menu stMenu;
+    public StringByReference  szMascaraDeCaptura;
+    public ByteByReference bTiposEntradaPermitidos;
+    public ByteByReference bTamanhoMinimo;
+    public ByteByReference bTamanhoMaximo;
+    public Integer ulValorMinimo;
+    public IntByReference ulValorMaximo;
+    public ByteByReference bOcultarDadosDigitados;
+    public ByteByReference bValidacaoDado;
+    public ByteByReference bAceitaNulo;
+    public StringByReference szValorInicial;
+    public ByteByReference bTeclasDeAtalho;
+    public StringByReference szMsgValidacao;
+    public StringByReference szMsgConfirmacao;
+    public StringByReference szMsgDadoMaior;
+    public StringByReference szMsgDadoMenor;
+    public ByteByReference bCapturarDataVencCartao ;
+    public IntByReference ulTipoEntradaCartao;
+    public ByteByReference bItemInicial;
+    public ByteByReference bNumeroCapturas;
+    public ByteByReference szMsgPrevia;
+    public ByteByReference bTipoEntradaCodigoBarras;
+    public ByteByReference bOmiteMsgAlerta;
+    public ByteByReference bIniciaPelaEsquerda;
+    public ByteByReference bNotificarCancelamento;
 
-    public PW_GetData(){
-        super();
-    }
+    public PW_GetData(){ }
 
-    //construtores do structure
-    public PW_GetData(Pointer pointer) {
-        super(pointer);
-    }
+    public static class ByReference extends PW_GetData implements Structure.ByReference { }
 
-
-    public static class ByReference extends PW_GetData implements Structure.ByReference {
-        public ByReference() {
-        }
-
-        public ByReference(Pointer p) {
-            super(p);
-            read();
-        }
-
-    }
-
-    public static class ByValue extends PW_GetData implements Structure.ByValue {
-        public ByValue() {
-        }
-
-        public ByValue(Pointer p) {
-            super(p);
-            read();
-        }
-
-    }
-    //fim dos construtores
+    public static class ByValue extends PW_GetData implements Structure.ByValue { }
 
     @Override
     protected List<String> getFieldOrder() {
-        return  Arrays.asList(
-                "bAceitaNulo",
-                "bCapturarDataVencCartao",
-                "bIniciaPelaEsquerda",
-                "bItemInicial",
-                "bNotificarCancelamento",
-                "bNumOpcoesMenu",
-                "bNumeroCapturas",
-                "bOcultarDadosDigitados",
-                "bOmiteMsgAlerta",
-                "bTamanhoMaximo",
-                "ulValorMinimo",
-                "bTeclasDeAtalho",
-                "bTipoDeDado",
-                "bTipoEntradaCodigoBarras",
-                "bTiposEntradaPermitidos",
-                "bValidacaoDado",
-                "stMenu",
-                "szMascaraDeCaptura",
-                "szMsgConfirmacao",
-                "szMsgDadoMaior",
-                "szMsgDadoMenor",
-                "szMsgPrevia",
-                "szMsgValidacao",
-                "szPrompt",
-                "szValorInicial",
-                "ulTipoEntradaCartao",
-                "ulValorMaximo",
-                "bTamanhoMinimo",
-                "wIdentificador"
-
-                );
+        return Arrays.asList(
+         "bAceitaNulo",
+         "bCapturarDataVencCartao",
+         "bIniciaPelaEsquerda",
+         "bItemInicial",
+         "bNotificarCancelamento",
+         "bNumOpcoesMenu",
+         "bNumeroCapturas",
+         "bOcultarDadosDigitados",
+         "bOmiteMsgAlerta",
+         "bTamanhoMaximo",
+         "bTamanhoMinimo",
+         "bTeclasDeAtalho",
+         "bTipoDeDado",
+         "bTipoEntradaCodigoBarras",
+         "bTiposEntradaPermitidos",
+         "bValidacaoDado",
+         "stMenu",
+         "szMascaraDeCaptura",
+         "szMsgConfirmacao",
+         "szMsgDadoMaior",
+         "szMsgDadoMenor",
+         "szMsgPrevia",
+         "szMsgValidacao",
+         "szPrompt",
+         "szValorInicial",
+         "ulTipoEntradaCartao",
+         "ulValorMaximo",
+         "ulValorMinimo",
+        "wIdentificador");
     }
 
 
