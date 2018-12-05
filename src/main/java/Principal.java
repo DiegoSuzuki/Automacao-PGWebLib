@@ -13,12 +13,11 @@ public class Principal {
 
         PW_GetData vstParam = new PW_GetData();
 
-        PW_GetData [] vstParam2 = (PW_GetData []) vstParam.toArray(10);
+        final PW_GetData [] vstParam2 = (PW_GetData []) vstParam.toArray(10);
 
-        ShorT.ByReference iNumParam = new ShorT.ByReference((short)10);
+        final ShorT.ByReference iNumParam = new ShorT.ByReference((short)10);
 
         System.out.println("\n\n\n\niNumParam Antes da função: " + iNumParam.x);
-
 
         String pw_iInit = ChamarFuncoes.chamarPW_iInit(".");
         System.out.println("PW_iInit: " + pw_iInit);
@@ -28,9 +27,20 @@ public class Principal {
 
         ChamarFuncoes.addMandatoryParams();
 
-        Thread.sleep(050);
-            String pw_iExecTransac = ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam);
-            System.out.println("ExecTransac:" + pw_iExecTransac);
+        Thread.sleep(600);
+
+        String pw_iExecTransac = ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam);
+        System.out.println("ExecTransac:" + pw_iExecTransac);
+
+
+
+        System.out.println("\n\n\n\nwIdentificador Depois da função: " + vstParam2[0].wIdentificador);
+        System.out.println("\n\n\n\nbTipoDeDados Depois da função: " + vstParam2[0].bTipoDeDado);
+        String retorno1 = new String(vstParam2[0].szPrompt);
+        System.out.println("\n\n\n\nszPrompt depois da função: " + retorno1);
+        System.out.println("\n\n\n\niNumParam Depois da função: " + iNumParam.x);
+
+
 
         /*
         String pwA_iAddParam1 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.POSID, "51276");
@@ -52,11 +62,5 @@ public class Principal {
         */
 
 
-
-        System.out.println("\n\n\n\nwIdentificador Depois da função: " + vstParam2[0].wIdentificador);
-        System.out.println("\n\n\n\nbTipoDeDados Depois da função: " + vstParam2[0].bTipoDeDado);
-        String retorno1 = new String(vstParam2[0].szPrompt);
-        System.out.println("\n\n\n\nszPrompt depois da função: " + retorno1);
-        System.out.println("\n\n\n\niNumParam Depois da função: " + iNumParam.x);
     }
 }
