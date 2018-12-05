@@ -1,24 +1,18 @@
 package Interfaces;
 import Estruturas.PW_GetData;
+import Estruturas.ShorT;
 import com.sun.jna.Library;
-import com.sun.jna.Native;
-import com.sun.jna.Platform;
-import com.sun.jna.Pointer;
-import com.sun.jna.ptr.PointerByReference;
 
 public interface InterfaceComPGWebLib extends Library {
 
-    InterfaceComPGWebLib INSTANCE = (InterfaceComPGWebLib) Native.loadLibrary
-            (Platform.isLinux() ? "/home/thiago/Área de Trabalho/Automacao_PGWebLibC/src/main/java/libPGWebLib.so": "PGwebLib", InterfaceComPGWebLib.class); //lendo a lib pela Interface
+    short PW_iInit(String caminho);
 
-    int PW_iInit(String caminho);
+    short PW_iNewTransac(int bOper);
 
-    int PW_iNewTransac(int bOper);
+    short PW_iAddParam (int wParam, String pszValue);
 
-    int PW_iAddParam (int wParam, String pszValue);
+    short PW_iExecTransac (PW_GetData [] vstParam, ShorT.ByReference iNumParam);
 
-    int PW_iAddParam (int wParam, int pszValue);
-
-    int PW_iExecTransac (PW_GetData.ByReference vstParam[], Pointer iNumParam);
+    short PW_iPPEventLoop (char [] szDspMdg, int ulDisplaySize);
 
 }

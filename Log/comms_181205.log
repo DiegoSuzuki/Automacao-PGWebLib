@@ -1,0 +1,450 @@
+09:43:47:205 PW_Init(.)
+09:43:47:210 Ultima limpeza: 04/12/2018 19:12:38)
+09:43:47:217 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:43:47:219 DISCONNECT =================================================================
+09:43:47:219 >>LNXSSL_iModemDisconnect
+09:43:47:221 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:43:47:221 PW_iAddParam(22, 1.1.0.0)
+09:43:47:221 PW_iAddParam(21, PGWEBLIBTEST)
+09:43:47:221 PW_iAddParam(36, 15)
+09:43:47:222 PW_iAddParam(246, 314159)
+09:43:47:257 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:43:53:415 PW_Init(.)
+09:43:53:415 Ultima limpeza: 04/12/2018 19:12:38)
+09:43:53:417 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:43:53:419 DISCONNECT =================================================================
+09:43:53:419 >>LNXSSL_iModemDisconnect
+09:43:53:420 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:43:53:420 PW_iAddParam(22, 1.1.0.0)
+09:43:53:421 PW_iAddParam(21, PGWEBLIBTEST)
+09:43:53:421 PW_iAddParam(36, 15)
+09:43:53:421 PW_iAddParam(246, 314159)
+09:43:53:438 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:44:08:758 PW_Init(.)
+09:44:08:758 Ultima limpeza: 04/12/2018 19:12:38)
+09:44:08:766 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:44:08:767 DISCONNECT =================================================================
+09:44:08:767 >>LNXSSL_iModemDisconnect
+09:44:08:771 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:44:08:771 PW_iAddParam(22, 1.1.0.0)
+09:44:08:771 PW_iAddParam(21, PGWEBLIBTEST)
+09:44:08:771 PW_iAddParam(36, 15)
+09:44:08:804 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:44:27:013 PW_Init(.)
+09:44:27:013 Ultima limpeza: 04/12/2018 19:12:38)
+09:44:27:016 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:44:27:017 DISCONNECT =================================================================
+09:44:27:017 >>LNXSSL_iModemDisconnect
+09:44:27:019 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:44:27:019 PW_iAddParam(22, 1.1.0.0)
+09:44:27:019 PW_iAddParam(21, PGWEBLIBTEST)
+09:44:27:019 PW_iAddParam(36, 15)
+09:44:27:230 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:44:31:101 PW_Init(.)
+09:44:31:101 Ultima limpeza: 04/12/2018 19:12:38)
+09:44:31:103 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:44:31:110 DISCONNECT =================================================================
+09:44:31:110 >>LNXSSL_iModemDisconnect
+09:44:31:114 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:44:31:114 PW_iAddParam(22, 1.1.0.0)
+09:44:31:114 PW_iAddParam(21, PGWEBLIBTEST)
+09:44:31:114 PW_iAddParam(36, 15)
+09:44:31:324 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:44:44:576 PW_Init(.)
+09:44:44:576 Ultima limpeza: 04/12/2018 19:12:38)
+09:44:44:579 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:44:44:580 DISCONNECT =================================================================
+09:44:44:580 >>LNXSSL_iModemDisconnect
+09:44:44:582 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:44:44:582 PW_iAddParam(22, 1.1.0.0)
+09:44:44:582 PW_iAddParam(21, PGWEBLIBTEST)
+09:44:44:582 PW_iAddParam(36, 15)
+09:44:44:793 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:44:48:041 PW_Init(.)
+09:44:48:041 Ultima limpeza: 04/12/2018 19:12:38)
+09:44:48:044 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:44:48:045 DISCONNECT =================================================================
+09:44:48:045 >>LNXSSL_iModemDisconnect
+09:44:48:047 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:44:48:047 PW_iAddParam(22, 1.1.0.0)
+09:44:48:047 PW_iAddParam(21, PGWEBLIBTEST)
+09:44:48:047 PW_iAddParam(36, 15)
+09:44:48:261 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:44:51:569 PW_Init(.)
+09:44:51:569 Ultima limpeza: 04/12/2018 19:12:38)
+09:44:51:572 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:44:51:573 DISCONNECT =================================================================
+09:44:51:573 >>LNXSSL_iModemDisconnect
+09:44:51:575 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:44:51:575 PW_iAddParam(22, 1.1.0.0)
+09:44:51:575 PW_iAddParam(21, PGWEBLIBTEST)
+09:44:51:575 PW_iAddParam(36, 15)
+09:44:51:790 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:45:03:414 PW_Init(.)
+09:45:03:414 Ultima limpeza: 04/12/2018 19:12:38)
+09:45:03:416 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:45:03:423 DISCONNECT =================================================================
+09:45:03:423 >>LNXSSL_iModemDisconnect
+09:45:03:425 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:45:03:425 PW_iAddParam(22, 1.1.0.0)
+09:45:03:425 PW_iAddParam(21, PGWEBLIBTEST)
+09:45:03:425 PW_iAddParam(36, 15)
+09:45:03:689 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:45:07:128 PW_Init(.)
+09:45:07:128 Ultima limpeza: 04/12/2018 19:12:38)
+09:45:07:131 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:45:07:132 DISCONNECT =================================================================
+09:45:07:133 >>LNXSSL_iModemDisconnect
+09:45:07:134 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:45:07:134 PW_iAddParam(22, 1.1.0.0)
+09:45:07:134 PW_iAddParam(21, PGWEBLIBTEST)
+09:45:07:134 PW_iAddParam(36, 15)
+09:45:07:408 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:45:13:805 PW_Init(.)
+09:45:13:805 Ultima limpeza: 04/12/2018 19:12:38)
+09:45:13:807 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:45:13:810 DISCONNECT =================================================================
+09:45:13:810 >>LNXSSL_iModemDisconnect
+09:45:13:811 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:45:13:811 PW_iAddParam(22, 1.1.0.0)
+09:45:13:811 PW_iAddParam(21, PGWEBLIBTEST)
+09:45:13:811 PW_iAddParam(36, 15)
+09:45:13:864 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:45:17:229 PW_Init(.)
+09:45:17:229 Ultima limpeza: 04/12/2018 19:12:38)
+09:45:17:235 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:45:17:239 DISCONNECT =================================================================
+09:45:17:239 >>LNXSSL_iModemDisconnect
+09:45:17:247 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:45:17:247 PW_iAddParam(22, 1.1.0.0)
+09:45:17:247 PW_iAddParam(21, PGWEBLIBTEST)
+09:45:17:247 PW_iAddParam(36, 15)
+09:45:17:293 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:45:20:769 PW_Init(.)
+09:45:20:769 Ultima limpeza: 04/12/2018 19:12:38)
+09:45:20:772 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:45:20:774 DISCONNECT =================================================================
+09:45:20:774 >>LNXSSL_iModemDisconnect
+09:45:20:775 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:45:20:775 PW_iAddParam(22, 1.1.0.0)
+09:45:20:776 PW_iAddParam(21, PGWEBLIBTEST)
+09:45:20:776 PW_iAddParam(36, 15)
+09:45:20:835 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:45:24:075 PW_Init(.)
+09:45:24:075 Ultima limpeza: 04/12/2018 19:12:38)
+09:45:24:082 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:45:24:084 DISCONNECT =================================================================
+09:45:24:084 >>LNXSSL_iModemDisconnect
+09:45:24:087 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:45:24:087 PW_iAddParam(22, 1.1.0.0)
+09:45:24:087 PW_iAddParam(21, PGWEBLIBTEST)
+09:45:24:087 PW_iAddParam(36, 15)
+09:45:24:139 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:45:40:071 PW_Init(.)
+09:45:40:071 Ultima limpeza: 04/12/2018 19:12:38)
+09:45:40:073 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:45:40:075 DISCONNECT =================================================================
+09:45:40:075 >>LNXSSL_iModemDisconnect
+09:45:40:076 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:45:40:076 PW_iAddParam(22, 1.1.0.0)
+09:45:40:076 PW_iAddParam(21, PGWEBLIBTEST)
+09:45:40:076 PW_iAddParam(36, 15)
+09:45:40:126 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:45:44:371 PW_Init(.)
+09:45:44:371 Ultima limpeza: 04/12/2018 19:12:38)
+09:45:44:373 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:45:44:374 DISCONNECT =================================================================
+09:45:44:375 >>LNXSSL_iModemDisconnect
+09:45:44:378 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:45:44:378 PW_iAddParam(22, 1.1.0.0)
+09:45:44:378 PW_iAddParam(21, PGWEBLIBTEST)
+09:45:44:378 PW_iAddParam(36, 15)
+09:45:44:429 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:46:31:221 PW_Init(.)
+09:46:31:221 Ultima limpeza: 04/12/2018 19:12:38)
+09:46:31:223 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:46:31:225 DISCONNECT =================================================================
+09:46:31:225 >>LNXSSL_iModemDisconnect
+09:46:31:226 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:46:31:226 PW_iAddParam(22, 1.1.0.0)
+09:46:31:226 PW_iAddParam(21, PGWEBLIBTEST)
+09:46:31:226 PW_iAddParam(36, 15)
+09:46:31:282 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:46:36:718 PW_Init(.)
+09:46:36:718 Ultima limpeza: 04/12/2018 19:12:38)
+09:46:36:720 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:46:36:722 DISCONNECT =================================================================
+09:46:36:722 >>LNXSSL_iModemDisconnect
+09:46:36:727 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:46:36:727 PW_iAddParam(22, 1.1.0.0)
+09:46:36:727 PW_iAddParam(21, PGWEBLIBTEST)
+09:46:36:729 PW_iAddParam(36, 15)
+09:46:36:781 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:46:39:851 PW_Init(.)
+09:46:39:851 Ultima limpeza: 04/12/2018 19:12:38)
+09:46:39:854 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:46:39:855 DISCONNECT =================================================================
+09:46:39:855 >>LNXSSL_iModemDisconnect
+09:46:39:857 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:46:39:857 PW_iAddParam(22, 1.1.0.0)
+09:46:39:857 PW_iAddParam(21, PGWEBLIBTEST)
+09:46:39:857 PW_iAddParam(36, 15)
+09:46:39:908 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:46:42:005 PW_Init(.)
+09:46:42:005 Ultima limpeza: 04/12/2018 19:12:38)
+09:46:43:007 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:46:43:009 DISCONNECT =================================================================
+09:46:43:009 >>LNXSSL_iModemDisconnect
+09:46:43:010 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:46:43:010 PW_iAddParam(22, 1.1.0.0)
+09:46:43:011 PW_iAddParam(21, PGWEBLIBTEST)
+09:46:43:011 PW_iAddParam(36, 15)
+09:46:43:065 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:46:46:446 PW_Init(.)
+09:46:46:446 Ultima limpeza: 04/12/2018 19:12:38)
+09:46:46:448 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:46:46:459 DISCONNECT =================================================================
+09:46:46:459 >>LNXSSL_iModemDisconnect
+09:46:46:464 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:46:46:464 PW_iAddParam(22, 1.1.0.0)
+09:46:46:464 PW_iAddParam(21, PGWEBLIBTEST)
+09:46:46:464 PW_iAddParam(36, 15)
+09:46:46:520 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:46:49:705 PW_Init(.)
+09:46:49:705 Ultima limpeza: 04/12/2018 19:12:38)
+09:46:49:707 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:46:49:711 DISCONNECT =================================================================
+09:46:49:711 >>LNXSSL_iModemDisconnect
+09:46:49:714 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:46:49:714 PW_iAddParam(22, 1.1.0.0)
+09:46:49:714 PW_iAddParam(21, PGWEBLIBTEST)
+09:46:49:714 PW_iAddParam(36, 15)
+09:46:49:769 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:52:55:597 PW_Init(.)
+09:52:55:597 Ultima limpeza: 04/12/2018 19:12:38)
+09:52:55:599 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:52:55:601 DISCONNECT =================================================================
+09:52:55:601 >>LNXSSL_iModemDisconnect
+09:52:55:603 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:52:55:603 PW_iAddParam(22, 1.1.0.0)
+09:52:55:603 PW_iAddParam(21, PGWEBLIBTEST)
+09:52:55:603 PW_iAddParam(36, 15)
+09:52:55:656 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:53:03:272 PW_Init(.)
+09:53:03:272 Ultima limpeza: 04/12/2018 19:12:38)
+09:53:03:274 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:53:03:276 DISCONNECT =================================================================
+09:53:03:276 >>LNXSSL_iModemDisconnect
+09:53:03:278 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:53:03:278 PW_iAddParam(22, 1.1.0.0)
+09:53:03:278 PW_iAddParam(21, PGWEBLIBTEST)
+09:53:03:278 PW_iAddParam(36, 15)
+09:53:03:330 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:53:07:149 PW_Init(.)
+09:53:07:149 Ultima limpeza: 04/12/2018 19:12:38)
+09:53:07:151 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:53:07:153 DISCONNECT =================================================================
+09:53:07:153 >>LNXSSL_iModemDisconnect
+09:53:07:155 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:53:07:155 PW_iAddParam(22, 1.1.0.0)
+09:53:07:155 PW_iAddParam(21, PGWEBLIBTEST)
+09:53:07:155 PW_iAddParam(36, 15)
+09:53:07:210 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:56:27:296 PW_Init(.)
+09:56:27:296 Ultima limpeza: 04/12/2018 19:12:38)
+09:56:27:298 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:56:27:300 DISCONNECT =================================================================
+09:56:27:300 >>LNXSSL_iModemDisconnect
+09:56:27:301 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:56:27:302 PW_iAddParam(22, 1.1.0.0)
+09:56:27:302 PW_iAddParam(21, PGWEBLIBTEST)
+09:56:27:302 PW_iAddParam(36, 15)
+09:56:27:350 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:57:08:324 PW_Init(.)
+09:57:08:324 Ultima limpeza: 04/12/2018 19:12:38)
+09:57:08:326 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:57:08:328 DISCONNECT =================================================================
+09:57:08:328 >>LNXSSL_iModemDisconnect
+09:57:08:330 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:57:08:330 PW_iAddParam(22, 1.1.0.0)
+09:57:08:330 PW_iAddParam(21, PGWEBLIBTEST)
+09:57:08:330 PW_iAddParam(36, 15)
+09:57:15:455 PW_Init(.)
+09:57:15:455 Ultima limpeza: 04/12/2018 19:12:38)
+09:57:15:457 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:57:15:459 DISCONNECT =================================================================
+09:57:15:459 >>LNXSSL_iModemDisconnect
+09:57:15:460 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:57:15:461 PW_iAddParam(22, 1.1.0.0)
+09:57:15:461 PW_iAddParam(21, PGWEBLIBTEST)
+09:57:15:461 PW_iAddParam(36, 15)
+09:57:15:513 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:57:18:734 PW_Init(.)
+09:57:18:734 Ultima limpeza: 04/12/2018 19:12:38)
+09:57:18:740 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:57:18:742 DISCONNECT =================================================================
+09:57:18:742 >>LNXSSL_iModemDisconnect
+09:57:18:744 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:57:18:745 PW_iAddParam(22, 1.1.0.0)
+09:57:18:746 PW_iAddParam(21, PGWEBLIBTEST)
+09:57:18:747 PW_iAddParam(36, 15)
+09:57:18:805 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:57:22:181 PW_Init(.)
+09:57:22:181 Ultima limpeza: 04/12/2018 19:12:38)
+09:57:22:184 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:57:22:186 DISCONNECT =================================================================
+09:57:22:186 >>LNXSSL_iModemDisconnect
+09:57:22:188 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:57:22:188 PW_iAddParam(22, 1.1.0.0)
+09:57:22:188 PW_iAddParam(21, PGWEBLIBTEST)
+09:57:22:188 PW_iAddParam(36, 15)
+09:57:41:501 PW_Init(.)
+09:57:41:501 Ultima limpeza: 04/12/2018 19:12:38)
+09:57:41:503 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:57:41:505 DISCONNECT =================================================================
+09:57:41:505 >>LNXSSL_iModemDisconnect
+09:57:41:507 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:57:41:507 PW_iAddParam(22, 1.1.0.0)
+09:57:41:507 PW_iAddParam(21, PGWEBLIBTEST)
+09:57:41:507 PW_iAddParam(36, 15)
+09:57:41:568 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+09:58:07:754 PW_Init(.)
+09:58:07:754 Ultima limpeza: 04/12/2018 19:12:38)
+09:58:07:756 PW_iNewTransac(1, 0004.0000.0059.0000)
+09:58:07:758 DISCONNECT =================================================================
+09:58:07:758 >>LNXSSL_iModemDisconnect
+09:58:07:759 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+09:58:07:760 PW_iAddParam(22, 1.1.0.0)
+09:58:07:760 PW_iAddParam(21, PGWEBLIBTEST)
+09:58:07:760 PW_iAddParam(36, 15)
+09:58:07:823 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:08:38:835 PW_Init(.)
+10:08:38:835 Ultima limpeza: 04/12/2018 19:12:38)
+10:08:38:837 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:08:38:839 DISCONNECT =================================================================
+10:08:38:839 >>LNXSSL_iModemDisconnect
+10:08:38:841 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:08:38:841 PW_iAddParam(22, 1.1.0.0)
+10:08:38:841 PW_iAddParam(21, PGWEBLIBTEST)
+10:08:38:841 PW_iAddParam(36, 15)
+10:08:38:900 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:09:55:230 PW_Init(.)
+10:09:55:230 Ultima limpeza: 04/12/2018 19:12:38)
+10:09:55:232 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:09:55:233 DISCONNECT =================================================================
+10:09:55:234 >>LNXSSL_iModemDisconnect
+10:09:55:236 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:09:55:236 PW_iAddParam(22, 1.1.0.0)
+10:09:55:236 PW_iAddParam(21, PGWEBLIBTEST)
+10:09:55:236 PW_iAddParam(36, 15)
+10:09:55:294 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:10:23:516 PW_Init(.)
+10:10:23:516 Ultima limpeza: 04/12/2018 19:12:38)
+10:10:23:518 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:10:23:520 DISCONNECT =================================================================
+10:10:23:520 >>LNXSSL_iModemDisconnect
+10:10:23:530 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:10:23:530 PW_iAddParam(22, 1.1.0.0)
+10:10:23:530 PW_iAddParam(21, PGWEBLIBTEST)
+10:10:23:531 PW_iAddParam(36, 15)
+10:10:23:589 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:10:28:895 PW_Init(.)
+10:10:28:895 Ultima limpeza: 04/12/2018 19:12:38)
+10:10:28:897 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:10:28:899 DISCONNECT =================================================================
+10:10:28:899 >>LNXSSL_iModemDisconnect
+10:10:28:901 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:10:28:901 PW_iAddParam(22, 1.1.0.0)
+10:10:28:901 PW_iAddParam(21, PGWEBLIBTEST)
+10:10:28:901 PW_iAddParam(36, 15)
+10:10:28:953 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:10:38:918 PW_Init(.)
+10:10:38:918 Ultima limpeza: 04/12/2018 19:12:38)
+10:10:38:921 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:10:38:927 DISCONNECT =================================================================
+10:10:38:927 >>LNXSSL_iModemDisconnect
+10:10:38:929 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:10:38:929 PW_iAddParam(22, 1.1.0.0)
+10:10:38:929 PW_iAddParam(21, PGWEBLIBTEST)
+10:10:38:929 PW_iAddParam(36, 15)
+10:10:38:989 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:10:55:772 PW_Init(.)
+10:10:55:772 Ultima limpeza: 04/12/2018 19:12:38)
+10:10:55:778 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:10:55:780 DISCONNECT =================================================================
+10:10:55:781 >>LNXSSL_iModemDisconnect
+10:10:55:782 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:10:55:782 PW_iAddParam(22, 1.1.0.0)
+10:10:55:782 PW_iAddParam(21, PGWEBLIBTEST)
+10:10:55:782 PW_iAddParam(36, 15)
+10:10:55:840 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:11:05:666 PW_Init(.)
+10:11:05:666 Ultima limpeza: 04/12/2018 19:12:38)
+10:11:05:669 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:11:05:670 DISCONNECT =================================================================
+10:11:05:670 >>LNXSSL_iModemDisconnect
+10:11:05:672 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:11:05:672 PW_iAddParam(22, 1.1.0.0)
+10:11:05:672 PW_iAddParam(21, PGWEBLIBTEST)
+10:11:05:673 PW_iAddParam(36, 15)
+10:11:05:727 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:11:13:503 PW_Init(.)
+10:11:13:503 Ultima limpeza: 04/12/2018 19:12:38)
+10:11:13:505 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:11:13:507 DISCONNECT =================================================================
+10:11:13:507 >>LNXSSL_iModemDisconnect
+10:11:13:509 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:11:13:509 PW_iAddParam(22, 1.1.0.0)
+10:11:13:509 PW_iAddParam(21, PGWEBLIBTEST)
+10:11:13:509 PW_iAddParam(36, 15)
+10:11:13:561 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:11:23:275 PW_Init(.)
+10:11:23:275 Ultima limpeza: 04/12/2018 19:12:38)
+10:11:23:283 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:11:23:284 DISCONNECT =================================================================
+10:11:23:284 >>LNXSSL_iModemDisconnect
+10:11:23:286 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:11:23:288 PW_iAddParam(22, 1.1.0.0)
+10:11:23:288 PW_iAddParam(21, PGWEBLIBTEST)
+10:11:23:288 PW_iAddParam(36, 15)
+10:11:23:334 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:11:31:743 PW_Init(.)
+10:11:31:743 Ultima limpeza: 04/12/2018 19:12:38)
+10:11:31:745 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:11:31:747 DISCONNECT =================================================================
+10:11:31:747 >>LNXSSL_iModemDisconnect
+10:11:31:749 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:11:31:749 PW_iAddParam(22, 1.1.0.0)
+10:11:31:749 PW_iAddParam(21, PGWEBLIBTEST)
+10:11:31:749 PW_iAddParam(36, 15)
+10:11:31:795 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:11:40:786 PW_Init(.)
+10:11:40:786 Ultima limpeza: 04/12/2018 19:12:38)
+10:11:40:788 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:11:40:790 DISCONNECT =================================================================
+10:11:40:790 >>LNXSSL_iModemDisconnect
+10:11:40:797 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:11:40:797 PW_iAddParam(22, 1.1.0.0)
+10:11:40:797 PW_iAddParam(21, PGWEBLIBTEST)
+10:11:40:797 PW_iAddParam(36, 15)
+10:11:40:849 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+10:12:46:949 PW_Init(.)
+10:12:46:950 Ultima limpeza: 04/12/2018 19:12:38)
+10:12:46:952 PW_iNewTransac(1, 0004.0000.0059.0000)
+10:12:46:955 DISCONNECT =================================================================
+10:12:46:955 >>LNXSSL_iModemDisconnect
+10:12:46:956 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+10:12:46:957 PW_iAddParam(22, 1.1.0.0)
+10:12:46:957 PW_iAddParam(21, PGWEBLIBTEST)
+10:12:46:958 PW_iAddParam(36, 15)
+10:12:47:016 PW_iExecTransac(0004.0000.0059.0000) <-2497>
+11:38:09:724 PW_Init(.)
+11:38:09:730 Ultima limpeza: 04/12/2018 19:12:38)
+11:38:09:736 PW_iNewTransac(1, 0004.0000.0059.0000)
+11:38:09:739 DISCONNECT =================================================================
+11:38:09:739 >>LNXSSL_iModemDisconnect
+11:38:09:741 PW_iAddParam(23, SETIS AUTOMACAO E SISTEMA LTDA)
+11:38:09:744 PW_iAddParam(22, 1.1.0.0)
+11:38:09:744 PW_iAddParam(21, PGWEBLIBTEST)
+11:38:09:744 PW_iAddParam(36, 15)
+11:38:09:798 PW_iExecTransac(0004.0000.0059.0000) <-2497>

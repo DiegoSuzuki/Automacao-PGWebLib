@@ -1,34 +1,37 @@
 import Enums.PWINFO;
 import Enums.PWOPER;
 import Estruturas.PW_GetData;
+import Estruturas.ShorT;
 import Interfaces.InterfaceComPGWebLib;
-import com.sun.jna.ptr.PointerByReference;
-
-
+import com.sun.jna.Native;
+import com.sun.jna.Platform;
 
 public class LibIntegrada {
 
     private InterfaceComPGWebLib pgWebLib;
 
-    public LibIntegrada () {
-        this.pgWebLib = InterfaceComPGWebLib.INSTANCE; // usando a interface com a lib
+    public LibIntegrada() {
+        this.pgWebLib =  Native.loadLibrary (Platform.isLinux() ? "PGWebLib.so" : "PGwebLib",
+                InterfaceComPGWebLib.class); //lendo a lib pela Interface
     }
 
-    public int chamarPW_iInit(String caminho){
+    public short chamarPW_iInit(String caminho){
         return pgWebLib.PW_iInit(caminho);
     }
 
-    public int chamarPW_iNewTransac(PWOPER tipoOperacao){ return pgWebLib.PW_iNewTransac(tipoOperacao.getValor()); }
+    public short chamarPW_iNewTransac(PWOPER tipoOperacao){
+        return pgWebLib.PW_iNewTransac(tipoOperacao.getValor());
+    }
 
-    public int chamarPW_iAddParam (PWINFO wParam, String pszValue){
+    public short chamarPW_iAddParam (PWINFO wParam, String pszValue){
         return pgWebLib.PW_iAddParam(wParam.getValor(),pszValue);
     }
 
-    public int chamarPW_iAddParam (PWINFO wParam, int pszValue){
-        return pgWebLib.PW_iAddParam(wParam.getValor(),pszValue);
+    public short chamarPW_iExecTransac(PW_GetData [] vstParam, ShorT.ByReference iNumParam) {
+        return pgWebLib.PW_iExecTransac(vstParam, iNumParam);
     }
 
-    public int chamarPW_iExecTransac(PW_GetData.ByReference vstParam [], ShortByPointer iNumParam) {
-        return pgWebLib.PW_iExecTransac(vstParam, iNumParam.getPointer());
+    public short chamarPW_iPP_EventLoop(char[] szDspMsg, int ulDisplaySize ){
+        return pgWebLib.PW_iPPEventLoop(szDspMsg, ulDisplaySize);
     }
 }

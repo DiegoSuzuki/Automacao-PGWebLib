@@ -2,8 +2,7 @@ import Enums.PWINFO;
 import Enums.PWOPER;
 import Enums.PWRET;
 import Estruturas.PW_GetData;
-import com.sun.jna.Pointer;
-import com.sun.jna.ptr.PointerByReference;
+import Estruturas.ShorT;
 
 
 public class ChamarFuncoes {
@@ -11,39 +10,39 @@ public class ChamarFuncoes {
     static private LibIntegrada libIntegrada = new LibIntegrada();
 
     public static String chamarPW_iInit(String caminho){
-        int pw_iInit = libIntegrada.chamarPW_iInit (caminho);
+        short pw_iInit = libIntegrada.chamarPW_iInit (caminho);
         return convertStringError(pw_iInit);
     }
 
     public static String chamarPW_iNewTransac(PWOPER tipoOperacao){
-        int pw_iNewTransac = libIntegrada.chamarPW_iNewTransac(tipoOperacao);
+        short pw_iNewTransac = libIntegrada.chamarPW_iNewTransac(tipoOperacao);
         return  convertStringError(pw_iNewTransac);
     }
 
     public static String chamarPW_iAddParam(PWINFO wParam, String pszValue){
-        int pw_iAddParam = libIntegrada.chamarPW_iAddParam(wParam, pszValue);
+        short pw_iAddParam = libIntegrada.chamarPW_iAddParam(wParam, pszValue);
         return convertStringError(pw_iAddParam);
     }
 
-    public static String chamarPW_iAddParam(PWINFO wParam, int pszValue){
-        int pw_iAddParam = libIntegrada.chamarPW_iAddParam(wParam, pszValue);
-        return convertStringError(pw_iAddParam);
-    }
 
     public static void addMandatoryParams(){
         chamarPW_iAddParam(PWINFO.AUTDEV,"SETIS AUTOMACAO E SISTEMA LTDA");
         chamarPW_iAddParam(PWINFO.AUTVER,"1.1.0.0");
         chamarPW_iAddParam(PWINFO.AUTNAME,"PGWEBLIBTEST");
         chamarPW_iAddParam(PWINFO.AUTCAP,"15");
-        chamarPW_iAddParam(PWINFO.AUTHTECHUSER,"PGWEBLIBTEST");
     }
 
-    public static String chamarPW_iExecTransac(PW_GetData.ByReference [] vstParam, ShortByPointer iNUmParam) {
-       int pw_iExecTransac = libIntegrada.chamarPW_iExecTransac(vstParam, iNUmParam);
+    public static String chamarPW_iExecTransac(PW_GetData[] vstParam, ShorT.ByReference iNUmParam) {
+        short pw_iExecTransac = libIntegrada.chamarPW_iExecTransac(vstParam, iNUmParam);
         return convertStringError(pw_iExecTransac);
     }
 
-    private static String convertStringError(int result){
+    public static String chamarPW_iPPEventLoop (char [] szDspMsg, int ulDisplaySize) {
+        short pw_iPP_eventLoop = libIntegrada.chamarPW_iPP_EventLoop(szDspMsg, ulDisplaySize);
+        return convertStringError(pw_iPP_eventLoop);
+    }
+
+    private static String convertStringError(short result){
 
         if (result == PWRET.OK.getValor()) return PWRET.OK.toString();
 

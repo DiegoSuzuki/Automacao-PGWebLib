@@ -22,8 +22,6 @@
  22/Fev/18 Guilherme    - Ampliação de PWMENU_MAXINTENS de 20 para 40 (CA18-0021).
  20/Jul/18 Massaia      - Adicionado PWRET_PPERRTREATMENT (CA18-0062).
  01/Ago/18 Erwin			- Adicionado PWINFO_AUTHSYSTEXTENDED (CA18-0067).
- 30/Ago/18 Guilherme    - Adicionadas TAGS para recebimento dos dados de confirmação
-                          da biblioteca de integração.
  \*****************************************************************************/
 #ifndef _PGWEBLIB_INCLUDED_
 #define _PGWEBLIB_INCLUDED_
@@ -506,11 +504,6 @@ enum{
 #define PWPTI_RESPCODE           0xA4
 #define PWPTI_COMMODE            0xA5
 #define PWPTI_CLIVERSION         0xA6
-#define PWPTI_EFTCONFREQNUM      0xA7
-#define PWPTI_EFTCONFLOCREF      0xA8
-#define PWPTI_EFTCONFEXTREF      0xA9
-#define PWPTI_EFTCONFVIRTMERCH   0xAA
-#define PWPTI_EFTCONFAUTSYST     0xAB
 #define PWPTI_LASTTAG            0xBF /* Fim do range para Tags na PTI */
 
 

@@ -1,53 +1,62 @@
 import Enums.PWINFO;
 import Enums.PWOPER;
 import Estruturas.PW_GetData;
-import Estruturas.PW_Menu;
-import com.sun.jna.StringArray;
-import com.sun.jna.ptr.PointerByReference;
+import Estruturas.ShorT;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
 
-import javax.swing.text.AttributeSet;
-import java.util.Vector;
+import java.io.UnsupportedEncodingException;
 
 public class Principal {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+        PW_GetData vstParam = new PW_GetData();
+
+        PW_GetData [] vstParam2 = (PW_GetData []) vstParam.toArray(10);
+
+        ShorT.ByReference iNumParam = new ShorT.ByReference((short)10);
+
+        System.out.println("\n\n\n\niNumParam Antes da função: " + iNumParam.x);
+
 
         String pw_iInit = ChamarFuncoes.chamarPW_iInit(".");
-        System.out.println("PW_iInit: "+ pw_iInit);
+        System.out.println("PW_iInit: " + pw_iInit);
 
         String pw_iNewTransac = ChamarFuncoes.chamarPW_iNewTransac(PWOPER.INSTALL);
         System.out.println("PW_iNewTransac: " + pw_iNewTransac);
 
         ChamarFuncoes.addMandatoryParams();
 
-        String pwA_iAddParam5 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.POSID,"54403");
-        System.out.println("PW_iAddParam PDC: " + pwA_iAddParam5);
+        Thread.sleep(050);
+            String pw_iExecTransac = ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam);
+            System.out.println("ExecTransac:" + pw_iExecTransac);
 
-        String pwA_iAddParam6 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.DESTTCPIP,"app.tpgw.ntk.com.br:17502");
-        System.out.println("PW_iAddParam IP/PORTA: " + pwA_iAddParam6);
+        /*
+        String pwA_iAddParam1 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.POSID, "51276");
+        System.out.println("PW_iAddParam PDC: " + pwA_iAddParam1);
 
-        String pwA_iAddParam7 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.AUTHTECHUSER,"314159");
-        System.out.println("PW_iAddParam Senha: " + pwA_iAddParam7);
+        String pwA_iAddParam2 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.DESTTCPIP, "app.tpgw.ntk.com.br:17502");
+        System.out.println("PW_iAddParam IP/PORTA: " + pwA_iAddParam2);
 
-        String pwA_iAddParam8 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.USINGPINPAD,"1");
-        System.out.println("PW_iAddParam Usind PIN Pad: " + pwA_iAddParam8);
+        String pwA_iAddParam3 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.MERCHCNPJCPF, "05471416000101");
+        System.out.println("PW_iAddParam CNPJ: " + pwA_iAddParam3);
 
-        PW_GetData.ByReference vstParam [] = (PW_GetData.ByReference[]) new PW_GetData.ByReference().toArray(1);
-
-        System.out.println("\nAntes da função: "+ (vstParam[0].szPrompt));
-        System.out.println("Antes da função: "+ (vstParam[0].bTipoDeDado) + "\n");
-
-
-
-        ShortByPointer iNumParam = new ShortByPointer((short)10);
+        String pwA_iAddParam4 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.USINGPINPAD, "0");
+        System.out.println("PW_iAddParam Using PIN Pad: " + pwA_iAddParam4);
 
 
-        String pw_iExecTransac = ChamarFuncoes.chamarPW_iExecTransac(vstParam, iNumParam);
-        System.out.println("PW_iExecTransac: " + pw_iExecTransac);
+        final PW_GetData.ByReference pwGetData =  new PW_GetData.ByReference();
 
-        System.out.println("\nDepois da função: " + (vstParam[0]));
-        //System.out.println("\nDepois da função: " + (vstParam[1]));
+        final PW_GetData.ByReference [] vstParam = (PW_GetData.ByReference[]) pwGetData.toArray(10);
+        */
 
+
+
+        System.out.println("\n\n\n\nwIdentificador Depois da função: " + vstParam2[0].wIdentificador);
+        System.out.println("\n\n\n\nbTipoDeDados Depois da função: " + vstParam2[0].bTipoDeDado);
+        String retorno1 = new String(vstParam2[0].szPrompt);
+        System.out.println("\n\n\n\nszPrompt depois da função: " + retorno1);
+        System.out.println("\n\n\n\niNumParam Depois da função: " + iNumParam.x);
     }
-
 }
