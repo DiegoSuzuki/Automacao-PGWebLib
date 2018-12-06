@@ -3,6 +3,7 @@ import Enums.PWOPER;
 import Enums.PWRET;
 import Estruturas.PW_GetData;
 import Estruturas.ShorT;
+import com.sun.jna.ptr.ShortByReference;
 
 
 public class ChamarFuncoes {
@@ -32,14 +33,19 @@ public class ChamarFuncoes {
         chamarPW_iAddParam(PWINFO.AUTCAP,"15");
     }
 
-    public static String chamarPW_iExecTransac(PW_GetData[] vstParam, ShorT.ByReference iNUmParam) {
+    public static String chamarPW_iExecTransac(PW_GetData [] vstParam, ShortByReference iNUmParam) {
         short pw_iExecTransac = libIntegrada.chamarPW_iExecTransac(vstParam, iNUmParam);
         return convertStringError(pw_iExecTransac);
     }
 
-    public static String chamarPW_iPPEventLoop (char [] szDspMsg, int ulDisplaySize) {
+    public static String chamarPW_iPPEventLoop (byte [] szDspMsg, int ulDisplaySize) {
         short pw_iPP_eventLoop = libIntegrada.chamarPW_iPP_EventLoop(szDspMsg, ulDisplaySize);
         return convertStringError(pw_iPP_eventLoop);
+    }
+
+    public static String chamarPW_iPPRemoveCard () {
+        short pw_iPP_removeCard = libIntegrada.chamarPW_iPP_RemoveCard();
+        return convertStringError(pw_iPP_removeCard);
     }
 
     private static String convertStringError(short result){

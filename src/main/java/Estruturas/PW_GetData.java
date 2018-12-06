@@ -3,7 +3,7 @@ import com.sun.jna.Structure;
 import java.util.Arrays;
 import java.util.List;
 
-public class PW_GetData extends Structure {
+public class PW_GetData extends Structure{
 
     public short wIdentificador;
     public byte bTipoDeDado;
@@ -22,14 +22,14 @@ public class PW_GetData extends Structure {
     public byte [] szValorInicial = new byte [41];
     public byte bTeclasDeAtalho;
     public byte [] szMsgValidacao = new byte [84];
-    public char [] szMsgConfirmacao = new char [84];
-    public char [] szMsgDadoMaior = new char [84];
-    public char [] szMsgDadoMenor = new char [84];
+    public byte [] szMsgConfirmacao = new byte [84];
+    public byte [] szMsgDadoMaior = new byte [84];
+    public byte [] szMsgDadoMenor = new byte [84];
     public byte bCapturarDataVencCartao ;
     public int ulTipoEntradaCartao;
     public byte bItemInicial;
     public byte bNumeroCapturas;
-    public char [] szMsgPrevia = new char [84];
+    public byte [] szMsgPrevia = new byte [84];
     public byte bTipoEntradaCodigoBarras;
     public byte bOmiteMsgAlerta;
     public byte bIniciaPelaEsquerda;

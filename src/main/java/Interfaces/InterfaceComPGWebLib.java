@@ -1,7 +1,7 @@
 package Interfaces;
 import Estruturas.PW_GetData;
-import Estruturas.ShorT;
 import com.sun.jna.Library;
+import com.sun.jna.ptr.ShortByReference;
 
 public interface InterfaceComPGWebLib extends Library {
 
@@ -11,8 +11,9 @@ public interface InterfaceComPGWebLib extends Library {
 
     short PW_iAddParam (int wParam, String pszValue);
 
-    short PW_iExecTransac (PW_GetData [] vstParam, ShorT.ByReference iNumParam);
+    short PW_iExecTransac (PW_GetData [] vstParam, ShortByReference iNumParam );
 
-    short PW_iPPEventLoop (char [] szDspMdg, int ulDisplaySize);
+    short PW_iPPEventLoop (byte [] szDspMdg, int ulDisplaySize);
 
+    short PW_iPPRemoveCard ();
 }
