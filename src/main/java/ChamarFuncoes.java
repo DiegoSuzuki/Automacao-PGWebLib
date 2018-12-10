@@ -2,144 +2,160 @@ import Enums.PWINFO;
 import Enums.PWOPER;
 import Enums.PWRET;
 import Estruturas.PW_GetData;
-import Estruturas.ShorT;
 import com.sun.jna.ptr.ShortByReference;
+
+import static Enums.PWRET.*;
 
 
 public class ChamarFuncoes {
 
     static private LibIntegrada libIntegrada = new LibIntegrada();
 
-    public static String chamarPW_iInit(String caminho){
+    public static PWRET chamarPW_iInit(String caminho){
         short pw_iInit = libIntegrada.chamarPW_iInit (caminho);
-        return convertStringError(pw_iInit);
+        return convertPWRET(pw_iInit);
     }
 
-    public static String chamarPW_iNewTransac(PWOPER tipoOperacao){
+    public static PWRET chamarPW_iNewTransac(PWOPER tipoOperacao){
         short pw_iNewTransac = libIntegrada.chamarPW_iNewTransac(tipoOperacao);
-        return  convertStringError(pw_iNewTransac);
+        return  convertPWRET(pw_iNewTransac);
     }
 
-    public static String chamarPW_iAddParam(PWINFO wParam, String pszValue){
+    public static PWRET chamarPW_iAddParam(PWINFO wParam, String pszValue){
         short pw_iAddParam = libIntegrada.chamarPW_iAddParam(wParam, pszValue);
-        return convertStringError(pw_iAddParam);
+        return convertPWRET(pw_iAddParam);
     }
 
 
-    public static void addMandatoryParams(){
-        chamarPW_iAddParam(PWINFO.AUTDEV,"SETIS AUTOMACAO E SISTEMA LTDA");
-        chamarPW_iAddParam(PWINFO.AUTVER,"1.1.0.0");
-        chamarPW_iAddParam(PWINFO.AUTNAME,"PGWEBLIBTEST");
-        chamarPW_iAddParam(PWINFO.AUTCAP,"15");
+    public static PWRET addMandatoryParams(){
+        PWRET pwret = chamarPW_iAddParam(PWINFO.AUTDEV,"SETIS AUTOMACAO E SISTEMA LTDA");
+        if(pwret != OK)
+            return pwret;
+
+        pwret = chamarPW_iAddParam(PWINFO.AUTVER,"1.1.0.0");
+        if(pwret != OK)
+            return pwret;
+
+        pwret = chamarPW_iAddParam(PWINFO.AUTNAME,"PGWEBLIBTEST");
+        if(pwret != OK)
+            return pwret;
+
+        pwret = chamarPW_iAddParam(PWINFO.AUTCAP,"15");
+            return pwret;
     }
 
-    public static String chamarPW_iExecTransac(PW_GetData [] vstParam, ShortByReference iNUmParam) {
+    public static PWRET chamarPW_iExecTransac(PW_GetData[] vstParam, ShortByReference iNUmParam) {
         short pw_iExecTransac = libIntegrada.chamarPW_iExecTransac(vstParam, iNUmParam);
-        return convertStringError(pw_iExecTransac);
+        return convertPWRET(pw_iExecTransac);
     }
 
-    public static String chamarPW_iPPEventLoop (byte [] szDspMsg, int ulDisplaySize) {
+    public static PWRET chamarPW_iPPEventLoop (byte [] szDspMsg, int ulDisplaySize) {
         short pw_iPP_eventLoop = libIntegrada.chamarPW_iPP_EventLoop(szDspMsg, ulDisplaySize);
-        return convertStringError(pw_iPP_eventLoop);
+        return convertPWRET(pw_iPP_eventLoop);
     }
 
-    public static String chamarPW_iPPRemoveCard () {
+    public static PWRET chamarPW_iPPRemoveCard () {
         short pw_iPP_removeCard = libIntegrada.chamarPW_iPP_RemoveCard();
-        return convertStringError(pw_iPP_removeCard);
+        return convertPWRET(pw_iPP_removeCard);
     }
 
-    private static String convertStringError(short result){
+    public static PWRET chamarPW_iGetResult (int iInfo, byte [] pszData, int ulDataSize) {
+        short chamarPW_iGetResult = libIntegrada.chamarPW_iGetResult(iInfo, pszData, ulDataSize);
+        return convertPWRET(chamarPW_iGetResult);
+    }
 
-        if (result == PWRET.OK.getValor()) return PWRET.OK.toString();
+    private static PWRET convertPWRET(short result){
 
-        if (result == PWRET.FROMHOSTPENDTRN.getValor()) return PWRET.FROMHOSTPENDTRN.toString();
+        if (result == OK.getValor()) return OK;
 
-        if (result == PWRET.FROMHOSTPENDTRN.getValor()) return PWRET.FROMHOSTPENDTRN.toString();
+        if (result == FROMHOSTPENDTRN.getValor()) return FROMHOSTPENDTRN;
 
-        if (result == PWRET.FROMHOSTPOSAUTHERR.getValor()) return PWRET.FROMHOSTPOSAUTHERR.toString();
+        if (result == FROMHOSTPENDTRN.getValor()) return FROMHOSTPENDTRN;
 
-        if (result == PWRET.FROMHOSTUSRAUTHERR.getValor()) return PWRET.FROMHOSTUSRAUTHERR.toString();
+        if (result == FROMHOSTPOSAUTHERR.getValor()) return FROMHOSTPOSAUTHERR;
 
-        if (result == PWRET.FROMHOST.getValor()) return PWRET.FROMHOST.toString();
+        if (result == FROMHOSTUSRAUTHERR.getValor()) return FROMHOSTUSRAUTHERR;
 
-        if (result == PWRET.TLVERR.getValor()) return PWRET.TLVERR.toString();
+        if (result == FROMHOST.getValor()) return FROMHOST;
 
-        if (result == PWRET.SRVINVPARAM.getValor()) return PWRET.SRVINVPARAM.toString();
+        if (result == TLVERR.getValor()) return TLVERR;
 
-        if (result == PWRET.REQPARAM.getValor()) return PWRET.REQPARAM.toString();
+        if (result == SRVINVPARAM.getValor()) return SRVINVPARAM;
 
-        if (result == PWRET.HOSTCONNUNK.getValor()) return PWRET.HOSTCONNUNK.toString();
+        if (result == REQPARAM.getValor()) return REQPARAM;
 
-        if (result == PWRET.INTERNALERR.getValor()) return PWRET.INTERNALERR.toString();
+        if (result == HOSTCONNUNK.getValor()) return HOSTCONNUNK;
 
-        if (result == PWRET.BLOCKED.getValor()) return PWRET.BLOCKED.toString();
+        if (result == INTERNALERR.getValor()) return INTERNALERR;
 
-        if (result == PWRET.FROMHOSTTRNNFOUND.getValor()) return PWRET.FROMHOSTTRNNFOUND.toString();
+        if (result == BLOCKED.getValor()) return BLOCKED;
 
-        if (result == PWRET.PARAMSFILEERR.getValor()) return PWRET.PARAMSFILEERR.toString();
+        if (result == FROMHOSTTRNNFOUND.getValor()) return FROMHOSTTRNNFOUND;
 
-        if (result == PWRET.NOCARDENTMODE.getValor()) return PWRET.NOCARDENTMODE.toString();
+        if (result == PARAMSFILEERR.getValor()) return PARAMSFILEERR;
 
-        if (result == PWRET.INVALIDVIRTMERCH.getValor()) return PWRET.INVALIDVIRTMERCH.toString();
+        if (result == NOCARDENTMODE.getValor()) return NOCARDENTMODE;
 
-        if (result == PWRET.HOSTTIMEOUT.getValor()) return PWRET.HOSTTIMEOUT.toString();
+        if (result == INVALIDVIRTMERCH.getValor()) return INVALIDVIRTMERCH;
 
-        if (result == PWRET.CONFIGREQUIRED.getValor()) return PWRET.CONFIGREQUIRED.toString();
+        if (result == HOSTTIMEOUT.getValor()) return HOSTTIMEOUT;
 
-        if (result == PWRET.HOSTCONNERR.getValor()) return PWRET.HOSTCONNERR.toString();
+        if (result == CONFIGREQUIRED.getValor()) return CONFIGREQUIRED;
 
-        if (result == PWRET.HOSTCONNLOST.getValor()) return PWRET.HOSTCONNLOST.toString();
+        if (result == HOSTCONNERR.getValor()) return HOSTCONNERR;
 
-        if (result == PWRET.FILEERR.getValor()) return PWRET.FILEERR.toString();
+        if (result == HOSTCONNLOST.getValor()) return HOSTCONNLOST;
 
-        if (result == PWRET.PINPADERR.getValor()) return PWRET.PINPADERR.toString();
+        if (result == FILEERR.getValor()) return FILEERR;
 
-        if (result == PWRET.MAGSTRIPEERR.getValor()) return PWRET.MAGSTRIPEERR.toString();
+        if (result == PINPADERR.getValor()) return PINPADERR;
 
-        if (result == PWRET.PPCRYPTERR.getValor()) return PWRET.PPCRYPTERR.toString();
+        if (result == MAGSTRIPEERR.getValor()) return MAGSTRIPEERR;
 
-        if (result == PWRET.SSLCERTERR.getValor()) return PWRET.SSLCERTERR.toString();
+        if (result == PPCRYPTERR.getValor()) return PPCRYPTERR;
 
-        if (result == PWRET.SSLNCONN.getValor()) return PWRET.SSLNCONN.toString();
+        if (result == SSLCERTERR.getValor()) return SSLCERTERR;
 
-        if (result == PWRET.GPRSATTACHFAILED.getValor()) return PWRET.GPRSATTACHFAILED.toString();
+        if (result == SSLNCONN.getValor()) return SSLNCONN;
 
-        if (result == PWRET.INVPARAM.getValor()) return PWRET.INVPARAM.toString();
+        if (result == GPRSATTACHFAILED.getValor()) return GPRSATTACHFAILED;
 
-        if (result == PWRET.NOTINST.getValor()) return PWRET.NOTINST.toString();
+        if (result == INVPARAM.getValor()) return INVPARAM;
 
-        if (result == PWRET.MOREDATA.getValor()) return PWRET.MOREDATA.toString();
+        if (result == NOTINST.getValor()) return NOTINST;
 
-        if (result == PWRET.NODATA.getValor()) return PWRET.NODATA.toString();
+        if (result == MOREDATA.getValor()) return MOREDATA;
 
-        if (result == PWRET.DISPLAY.getValor()) return PWRET.DISPLAY.toString();
+        if (result == NODATA.getValor()) return NODATA;
 
-        if (result == PWRET.INVCALL.getValor()) return PWRET.INVCALL.toString();
+        if (result == DISPLAY.getValor()) return DISPLAY;
 
-        if (result == PWRET.NOTHING.getValor()) return PWRET.NOTHING.toString();
+        if (result == INVCALL.getValor()) return INVCALL;
 
-        if (result == PWRET.BUFOVFLW.getValor()) return PWRET.BUFOVFLW.toString();
+        if (result == NOTHING.getValor()) return NOTHING;
 
-        if (result == PWRET.CANCEL.getValor()) return PWRET.CANCEL.toString();
+        if (result == BUFOVFLW.getValor()) return BUFOVFLW;
 
-        if (result == PWRET.TIMEOUT.getValor()) return PWRET.TIMEOUT.toString();
+        if (result == CANCEL.getValor()) return CANCEL;
 
-        if (result == PWRET.PPNOTFOUND.getValor()) return PWRET.PPNOTFOUND.toString();
+        if (result == TIMEOUT.getValor()) return TIMEOUT;
 
-        if (result == PWRET.TRNNOTINIT.getValor()) return PWRET.TRNNOTINIT.toString();
+        if (result == PPNOTFOUND.getValor()) return PPNOTFOUND;
 
-        if (result == PWRET.DLLNOTINIT.getValor()) return PWRET.DLLNOTINIT.toString();
+        if (result == TRNNOTINIT.getValor()) return TRNNOTINIT;
 
-        if (result == PWRET.FALLBACK.getValor()) return PWRET.FALLBACK.toString();
+        if (result == DLLNOTINIT.getValor()) return DLLNOTINIT;
 
-        if (result == PWRET.WRITERR.getValor()) return PWRET.WRITERR.toString();
+        if (result == FALLBACK.getValor()) return FALLBACK;
 
-        if (result == PWRET.PPCOMERR.getValor()) return PWRET.PPCOMERR.toString();
+        if (result == WRITERR.getValor()) return WRITERR;
 
-        if (result == PWRET.NOMANDATORY.getValor()) return PWRET.NOMANDATORY.toString();
+        if (result == PPCOMERR.getValor()) return PPCOMERR;
 
-        if (result == PWRET.GPRSATTACHFAILED.getValor()) return PWRET.GPRSATTACHFAILED.toString();
+        if (result == NOMANDATORY.getValor()) return NOMANDATORY;
 
-        return "Erro não encontrado!";
+        if (result == GPRSATTACHFAILED.getValor()) return GPRSATTACHFAILED;
+
+        return null;
     }
 }

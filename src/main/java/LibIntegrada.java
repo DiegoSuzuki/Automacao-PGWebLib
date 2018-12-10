@@ -5,6 +5,7 @@ import Estruturas.ShorT;
 import Interfaces.InterfaceComPGWebLib;
 import com.sun.jna.Native;
 import com.sun.jna.Platform;
+import com.sun.jna.Pointer;
 import com.sun.jna.ptr.ShortByReference;
 
 public class LibIntegrada {
@@ -28,7 +29,8 @@ public class LibIntegrada {
         return pgWebLib.PW_iAddParam(wParam.getValor(),pszValue);
     }
 
-    public short chamarPW_iExecTransac(PW_GetData [] vstParam, ShortByReference iNumParam) {
+    public short chamarPW_iExecTransac(PW_GetData[] vstParam, ShortByReference iNumParam) {
+
         return pgWebLib.PW_iExecTransac(vstParam, iNumParam);
     }
 
@@ -38,5 +40,9 @@ public class LibIntegrada {
 
     public short chamarPW_iPP_RemoveCard(){
         return pgWebLib.PW_iPPRemoveCard();
+    }
+
+    public short chamarPW_iGetResult(int iInfo, byte [] pszData, int ulDataSize){
+        return pgWebLib.PW_iGetResult(iInfo, pszData, ulDataSize);
     }
 }

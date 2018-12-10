@@ -20,8 +20,6 @@
  01/Fev/18 Guilherme    - Criado o novo erro PWRET_OFFINTERNAL19(CA18-0012).
  07/Fev/18 Guilherme    - Criada nova função PW_iPPGetUserData (CA18-0014).
  22/Fev/18 Guilherme    - Ampliação de PWMENU_MAXINTENS de 20 para 40 (CA18-0021).
- 20/Jul/18 Massaia      - Adicionado PWRET_PPERRTREATMENT (CA18-0062).
- 01/Ago/18 Erwin			- Adicionado PWINFO_AUTHSYSTEXTENDED (CA18-0067).
  \*****************************************************************************/
 #ifndef _PGWEBLIB_INCLUDED_
 #define _PGWEBLIB_INCLUDED_
@@ -165,7 +163,6 @@ enum {
    PWRET_OFFINTERNAL18,
    PWRET_PPABORT,
    PWRET_OFFINTERNAL19,
-   PWRET_PPERRTREATMENT,
    /* Inserir novos erros de processamento local somente AQUI */
    PWRET_OFFEND
    /* Inserir novos erros da biblioteca somente AQUI */
@@ -418,7 +415,6 @@ enum{
 #define PWINFO_CNCDSPMSG	      0x74	
 #define PWINFO_CNCPPMSG	         0x75	
 #define PWINFO_OPERABORTED	      0x76
-#define PWINFO_AUTHSYSTEXTENDED  0x87
 #define PWINFO_CARDENTMODE	      0xC0
 #define PWINFO_CARDFULLPAN		   0xC1
 #define PWINFO_CARDEXPDATE		   0xC2
@@ -503,8 +499,7 @@ enum{
 #define PWPTI_BARCODEERR         0xA3
 #define PWPTI_RESPCODE           0xA4
 #define PWPTI_COMMODE            0xA5
-#define PWPTI_CLIVERSION         0xA6
-#define PWPTI_LASTTAG            0xBF /* Fim do range para Tags na PTI */
+#define PWPTI_LASTTAG            0xAF /* Fim do range para Tags na PTI */
 
 
 // Tipos de operação, utilizados na função PW_iGetOperations

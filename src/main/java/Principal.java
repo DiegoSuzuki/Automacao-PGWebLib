@@ -1,7 +1,15 @@
 import Enums.PWINFO;
 import Enums.PWOPER;
+import Enums.PWRET;
+
+import static Enums.PWRET.OK;
+
 import Estruturas.PW_GetData;
 import com.sun.jna.ptr.ShortByReference;
+
+import java.util.Scanner;
+
+
 
 public class Principal {
 
@@ -9,64 +17,85 @@ public class Principal {
 
         PW_GetData vstParam = new PW_GetData();
 
-        PW_GetData [] vstParam2 = (PW_GetData []) vstParam.toArray(10);
+        final PW_GetData [] vstParam2 = (PW_GetData []) vstParam.toArray(10);
 
         ShortByReference iNumParam = new ShortByReference((short)10);
 
         System.out.println("\n\n\n\niNumParam Antes da função: " + iNumParam.getValue());
 
-        String pw_iInit = ChamarFuncoes.chamarPW_iInit(".");
-        System.out.println("PW_iInit: " + pw_iInit);
+        System.out.println("Init: "+ ChamarFuncoes.chamarPW_iInit("/home/thiago/Área de Trabalho/Automacao_PGWebLibC/src/main/java/").toString()); //Init
 
-        String pw_iNewTransac = ChamarFuncoes.chamarPW_iNewTransac(PWOPER.INSTALL);
-        System.out.println("PW_iNewTransac: " + pw_iNewTransac);
+        System.out.println("New Transac: " + ChamarFuncoes.chamarPW_iNewTransac(PWOPER.INSTALL).toString()); //New Transac
 
-        ChamarFuncoes.addMandatoryParams();
+        System.out.println("Mandatory Params: " + ChamarFuncoes.addMandatoryParams().toString()); //Adicionando parametros mandatórios
 
-        String pwA_iAddParam1 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.AUTHTECHUSER, "314159");
-        System.out.println("PW_iAddParam Senha: " + pwA_iAddParam1);
+        PWRET pwret = null;
 
-        String pwA_iAddParam2 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.POSID, "51276");
-        System.out.println("PW_iAddParam PDC: " + pwA_iAddParam2);
+        do {
+            Thread.sleep(500);
+            pwret = ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam);  //Exec Transac
+            System.out.println("\nExec Transac: " + pwret.toString());
 
-
-        String pwA_iAddParam3 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.MERCHCNPJCPF, "05471416000101");
-        System.out.println("PW_iAddParam CNPJ: " + pwA_iAddParam3);
-
-        String pwA_iAddParam4 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.DESTTCPIP, "app.tpgw.ntk.com.br:17502");
-        System.out.println("PW_iAddParam IP/PORTA: " + pwA_iAddParam4);
-
-        Thread.sleep(50);
-
-        String pw_iExecTransac = ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam);
-        System.out.println("ExecTransac:" + pw_iExecTransac);
-
-        //String pw_iPPRemoveCard = ChamarFuncoes.chamarPW_iPPRemoveCard();
-        //System.out.println(pw_iPPRemoveCard);
+            System.out.println("\n\n\n\niNumParam depois da função: " + iNumParam.getValue());
 
 
-        //String pwA_iAddParam5 = ChamarFuncoes.chamarPW_iAddParam(PWINFO.USINGPINPAD, "0");
-        //System.out.println("PW_iAddParam Using PIN Pad: " + pwA_iAddParam5);
+            System.out.println("\nbTipoDeDados Depois da função: " + vstParam2[0].bTipoDeDado);
+            String szPrompt = new String(vstParam2[0].szPrompt);
+            System.out.println("Digite a seguir : " + szPrompt);
 
-        //byte [] c = new byte [100];
+            String szTexto1 = new String(vstParam2[0].stMenu.szTexto1);
+            System.out.println(szTexto1);
 
-        //String pw_iPPEventLoop = ChamarFuncoes.chamarPW_iPPEventLoop(c,100);
-        //System.out.println("EventLoop: " + pw_iPPEventLoop);
+            Scanner scan = new Scanner(System.in);
+            String entrada = scan.nextLine();
 
-        //while(pw_iPPEventLoop.equals("PWRET_NOTHING")){
-          //  Thread.sleep(100);
+            if(vstParam2[0].bTipoDeDado == 13) //Sai do loop de parametros para fazer iPPRemoveCard();
+                break;
 
-            //pw_iPPEventLoop = ChamarFuncoes.chamarPW_iPPEventLoop(c,100);
-            //System.out.println("EventLoop: " + pw_iPPEventLoop);
-        //}
+            System.out.println("Add Param: " + ChamarFuncoes.chamarPW_iAddParam(
+                    converterPWINFO(vstParam2[0].wIdentificador),entrada)); //Adicionando parametros
+
+            iNumParam.setValue((short)10); //Atualiza iNumParam
+
+        } while (true);
 
 
+        pwret = ChamarFuncoes.chamarPW_iPPRemoveCard();
+        System.out.println("iPPRemoveCard: " + pwret.toString());
 
-        System.out.println("\n\n\n\nwIdentificador Depois da função: " + vstParam2[0].wIdentificador);
-        System.out.println("\n\n\n\nbTipoDeDados Depois da função: " + vstParam2[0].bTipoDeDado);
-        String retorno1 = new String(vstParam2[0].szPrompt);
-        System.out.println("\n\n\n\nszPrompt depois da função: " + retorno1);
-        System.out.println("\n\n\n\niNumParam Depois da função: " + iNumParam.getValue());
 
+        byte [] szDspMsg = new byte [100];
+
+        while(pwret != OK){
+            Thread.sleep(100);
+
+            pwret = ChamarFuncoes.chamarPW_iPPEventLoop(szDspMsg,100);
+            System.out.println("EventLoop: " + pwret.toString());
+        }
+
+        byte [] pszData = new byte [1000];
+        pwret = ChamarFuncoes.chamarPW_iGetResult(PWINFO.RESULTMSG.getValor(), pszData, 1000);
+        System.out.println("iGetResult: " + pwret.toString());
+
+        String retornoFinal = new String(pszData);
+        System.out.println(retornoFinal);
+
+    }
+
+    private static PWINFO converterPWINFO(short valor){
+
+        if( valor == PWINFO.AUTCAP.getValor()) return PWINFO.AUTCAP;
+
+        if( valor == PWINFO.AUTHTECHUSER.getValor()) return PWINFO.AUTHTECHUSER;
+
+        if( valor == PWINFO.POSID.getValor()) return PWINFO.POSID;
+
+        if( valor == PWINFO.MERCHCNPJCPF.getValor()) return PWINFO.MERCHCNPJCPF;
+
+        if( valor == PWINFO.DESTTCPIP.getValor()) return PWINFO.DESTTCPIP;
+
+        if( valor == PWINFO.USINGPINPAD.getValor()) return PWINFO.USINGPINPAD;
+
+        return null;
     }
 }

@@ -1,6 +1,6 @@
 package Enums;
 
-public  enum PWRET {
+public enum PWRET {
     OK((short)0),
     FROMHOSTPENDTRN((short)-2599),
     FROMHOSTPOSAUTHERR((short)-2598),
