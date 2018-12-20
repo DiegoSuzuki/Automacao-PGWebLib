@@ -86,9 +86,6 @@ public class PW_Menu extends Structure {
     public byte [] szValor39 = new byte [256];
     public byte [] szValor40 = new byte [256];
 
-
-    public static class ByReference extends PW_Menu implements Structure.ByReference { }
-
     @Override
     protected List<String> getFieldOrder() {
         return Arrays.asList("szTexto1", "szTexto2", "szTexto3", "szTexto4", "szTexto5", "szTexto6", "szTexto7", "szTexto8", "szTexto9", "szTexto10",

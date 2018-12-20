@@ -35,10 +35,6 @@ public class PW_GetData extends Structure{
     public byte bIniciaPelaEsquerda;
     public byte bNotificarCancelamento;
 
-    public static class ByReference extends PW_GetData implements Structure.ByReference { }
-
-    public static class ByValue extends PW_GetData implements Structure.ByValue { }
-
     @Override
     protected List<String> getFieldOrder() {
         return Arrays.asList(

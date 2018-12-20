@@ -1,7 +1,6 @@
 package Interfaces;
 import Estruturas.PW_GetData;
 import com.sun.jna.Library;
-import com.sun.jna.Pointer;
 import com.sun.jna.ptr.ShortByReference;
 
 public interface InterfaceComPGWebLib extends Library {

@@ -44,7 +44,7 @@ public enum PWRET {
     //endregion
 
 
-    //region Erros específicos da biblioteca
+    //region Erros específicos da biblioteca*/
     INVPARAM((short)-2499),
     NOTINST((short)-2498),
     MOREDATA((short)-2497),
@@ -116,7 +116,9 @@ public enum PWRET {
         this.valor = valor;
     }
 
-    PWRET(){ valor = -1; }
+    PWRET(){
+        this.valor = -1;
+    }
 
     public short getValor(){
         return this.valor;

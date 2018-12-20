@@ -1,11 +1,9 @@
 import Enums.PWINFO;
 import Enums.PWOPER;
 import Estruturas.PW_GetData;
-import Estruturas.ShorT;
 import Interfaces.InterfaceComPGWebLib;
 import com.sun.jna.Native;
 import com.sun.jna.Platform;
-import com.sun.jna.Pointer;
 import com.sun.jna.ptr.ShortByReference;
 
 public class LibIntegrada {
@@ -13,7 +11,7 @@ public class LibIntegrada {
     private InterfaceComPGWebLib pgWebLib;
 
     public LibIntegrada() {
-        this.pgWebLib =  Native.loadLibrary (Platform.isLinux() ? "PGWebLib.so" : "PGwebLib",
+        this.pgWebLib =  Native.loadLibrary (Platform.isLinux() ? "Essenciais/PGWebLib.so" : "PGwebLib",
                 InterfaceComPGWebLib.class); //lendo a lib pela Interface
     }
 
