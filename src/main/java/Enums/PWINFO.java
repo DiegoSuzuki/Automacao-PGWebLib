@@ -29,6 +29,7 @@ public enum PWINFO {
     FISCALREF (40),
     CARDTYPE (41),
     PRODUCTNAME (42),
+    APAGADADOS(45), //Criado por mim
     DATETIME (49),
     REQNUM (50),
     AUTHSYST (53),

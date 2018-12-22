@@ -4,7 +4,8 @@ public enum PWOPER {
     ADMIN(32),
     SALE(33),
     INSTALL(1),
-    VERSION(252);
+    VERSION(252),
+    MAINTENACE(254);
 
     private int valor;
 

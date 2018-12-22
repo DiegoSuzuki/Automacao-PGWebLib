@@ -3,7 +3,9 @@ import Enums.PWINFO;
 import Enums.PWOPER;
 import Enums.PWRET;
 
+import static Enums.PWDAT.MENU;
 import static Enums.PWRET.MOREDATA;
+import static Enums.PWRET.NOTHING;
 import static Enums.PWRET.OK;
 
 import Estruturas.PW_GetData;
@@ -38,7 +40,8 @@ public class Principal {
 
 
             switch (opcao) {
-                case 0:
+                case 0: //ADMINISTRATIVA
+
                     System.out.println("New Transac: " + ChamarFuncoes.chamarPW_iNewTransac(PWOPER.ADMIN)); //New Transac
                     System.out.println("Mandatory Params: " + ChamarFuncoes.addMandatoryParams()); //Adicionando parametros mandatórios
 
@@ -51,86 +54,149 @@ public class Principal {
                     System.out.println("Digite a seguir : " + szPrompt);
 
                     String szTexto1 = formatarMensagem(vstParam2[0].stMenu.szTexto1);
-                    System.out.println("Escolha uma opção: \n" + tratarMsgADMIN(szTexto1));
 
-                    scan = new Scanner(System.in);
-                    int opcoes = scan.nextInt();
+                    if(converterPWDAT(vstParam2[0].bTipoDeDado) == MENU)
+                        szTexto1 = tratarMsgADMIN(szTexto1);
 
-                    switch (opcoes) {
-                        case 0: //INSTALACAO
-                            System.out.println("New Transac: " + ChamarFuncoes.chamarPW_iNewTransac(PWOPER.INSTALL)); //New Transac
-                            System.out.println("Mandatory Params: " + ChamarFuncoes.addMandatoryParams()); //Adicionando parametros mandatórios
+                    int opcoesADM;
+                    do { // fluxo da operação administrativa
 
-                            do {
-                                Thread.sleep(500);
-                                pwret = ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam);  //Exec Transac
-                                System.out.println("\nExec Transac: " + pwret);
+                        System.out.println(szTexto1);
 
-                                System.out.println("\nbTipoDeDados : " + converterPWDAT(vstParam2[0].bTipoDeDado));
-                                String szPromptZ = formatarMensagem(vstParam2[0].szPrompt);
-                                System.out.println("Digite a seguir : " + szPromptZ);
+                        scan = new Scanner(System.in);
+                        opcoesADM = scan.nextInt();
 
-                                String szTexto1Z = formatarMensagem(vstParam2[0].stMenu.szTexto1);
-                                System.out.println(szTexto1Z);
+                        switch (opcoesADM) {
+                            case 0: //INSTALACAO
 
-                                scan = new Scanner(System.in);
-                                String entradaZ = scan.nextLine();
+                                //EVENTLOOP
+                                byte[] szDspMsg = new byte[100];
+                                do {
+                                    Thread.sleep(100);
+                                    pwret = ChamarFuncoes.chamarPW_iPPEventLoop(szDspMsg, 100);
+                                    System.out.println("EventLoop: " + pwret.toString());
+                                    String szDspMsgZ = formatarMensagem(szDspMsg);
+                                    System.out.println(szDspMsgZ);
 
-                                if (vstParam2[0].bTipoDeDado == 13) //Sai do loop de parametros para fazer iPPRemoveCard();
-                                    break;
+                                    if(pwret == OK) //Retorno OK saindo do loop
+                                        break;
 
-                                System.out.println("Add Param: " + ChamarFuncoes.chamarPW_iAddParam(
-                                        converterPWINFO(vstParam2[0].wIdentificador), entradaZ)); //Adicionando parametros
+                                    System.out.println("Interromper captura?\n0 - SIM\n1 - NAO");
+                                    scan = new Scanner(System.in);
+                                    int interromper = scan.nextInt();
+                                    if(interromper == 0)
+                                        break;
+                                } while (pwret == NOTHING);
 
-                                iNumParam.setValue((short) 10); //Atualiza iNumParam
+                                System.out.println("\nExec Transac: " + ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam));//Exec Transac
 
-                            } while (pwret == MOREDATA);
+                                // GETRESULT
+                                byte[] pszData = new byte[1000];
+                                pwret = ChamarFuncoes.chamarPW_iGetResult(PWINFO.RESULTMSG.getValor(), pszData, 1000);
+                                System.out.println("iGetResult: " + pwret.toString());
+                                String retornoFinal = formatarMensagem(pszData);
+                                System.out.println(retornoFinal);
+
+                                break;
+
+                            case 1: //CONFIGURACAO
+
+                                System.out.println("New Transac: " + ChamarFuncoes.chamarPW_iNewTransac(PWOPER.INSTALL)); //New Transac
+                                System.out.println("Mandatory Params: " + ChamarFuncoes.addMandatoryParams()); //Adicionando parametros mandatórios
+
+                                do {
+                                    Thread.sleep(500);
+                                    pwret = ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam);  //Exec Transac
+                                    System.out.println("\nExec Transac: " + pwret);
+
+                                    System.out.println("\nbTipoDeDados : " + converterPWDAT(vstParam2[0].bTipoDeDado));
+                                    String szPromptZ = formatarMensagem(vstParam2[0].szPrompt);
+                                    System.out.println("Digite a seguir : " + szPromptZ);
+
+                                    //String szTexto1Z = formatarMensagem(vstParam2[0].stMenu.szTexto1);
+                                    //System.out.println(szTexto1Z);
 
 
-                            pwret = ChamarFuncoes.chamarPW_iPPRemoveCard();
-                            System.out.println("iPPRemoveCard: " + pwret.toString());
+                                    if (vstParam2[0].bTipoDeDado == 13) { //Sai do loop de parametros para fazer iPPRemoveCard();
+                                        System.out.println("Saindo do fluxo pelo RemoveCard");
+                                        System.out.println("iPPRemoveCard: " + ChamarFuncoes.chamarPW_iPPRemoveCard());
+                                        break;
+                                    }
 
-                            byte[] szDspMsg = new byte[100];
+                                    scan = new Scanner(System.in);
+                                    String entradaZ = scan.nextLine();
 
-                            while (pwret != OK) {
-                                Thread.sleep(100);
 
-                                pwret = ChamarFuncoes.chamarPW_iPPEventLoop(szDspMsg, 100);
-                                System.out.println("EventLoop: " + pwret.toString());
-                            }
+                                    System.out.println("Add Param: " + ChamarFuncoes.chamarPW_iAddParam(
+                                            converterPWINFO(vstParam2[0].wIdentificador), entradaZ)); //Adicionando parametros
 
-                            byte[] pszData = new byte[1000];
-                            pwret = ChamarFuncoes.chamarPW_iGetResult(PWINFO.RESULTMSG.getValor(), pszData, 1000);
-                            System.out.println("iGetResult: " + pwret.toString());
+                                    iNumParam.setValue((short) 10); //Atualiza iNumParam
 
-                            String retornoFinal = formatarMensagem(pszData);
-                            System.out.println(retornoFinal);
-                            break;
+                                } while (pwret == MOREDATA);
 
-                        case 1 : //CONFIGURACAO
-                            System.out.println("Implementar Config");
-                            break;
+                                break;
 
-                        case 2 : //MANUTENCAO
-                            //System.out.println("New Transac: " + ChamarFuncoes.chamarPW_iNewTransac(PWOPER.SALE)); //New Transac
-                            //System.out.println("Mandatory Params: " + ChamarFuncoes.addMandatoryParams()); //Adicionando parametros mandatórios
+                            case 2: //MANUTENCAO
+                                System.out.println("New Transac: " + ChamarFuncoes.chamarPW_iNewTransac(PWOPER.MAINTENACE)); //New Transac
+                                System.out.println("Mandatory Params: " + ChamarFuncoes.addMandatoryParams()); //Adicionando parametros mandatórios
 
-                            break;
-                        case 3 : //VERSAO
-                            System.out.println("New Transac: " + ChamarFuncoes.chamarPW_iNewTransac(PWOPER.VERSION)); //New Transac
-                            System.out.println("Mandatory Params: " + ChamarFuncoes.addMandatoryParams()); //Adicionando parametros mandatórios
-                            System.out.println("\nExec Transac: " + ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam)); //Exec Transac);
+                                do {
+                                    Thread.sleep(500);
+                                    pwret = ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam); //Exec Transac
 
-                            pszData = new byte[1000];
-                            pwret = ChamarFuncoes.chamarPW_iGetResult(PWINFO.RESULTMSG.getValor(), pszData, 1000);
-                            System.out.println("iGetResult: " + pwret +"\n\n");
+                                    if(pwret == OK)
+                                        break;
 
-                            retornoFinal = formatarMensagem(pszData);
-                            System.out.println(retornoFinal+"\n\n");
-                            break;
-                    }
+                                    System.out.println("\nbTipoDeDados : " + converterPWDAT(vstParam2[0].bTipoDeDado));
+                                    String szPromptZ = formatarMensagem(vstParam2[0].szPrompt);
+                                    System.out.println("Digite a seguir : " + szPromptZ);
 
-                    break;
+                                    String szTexto1Z = formatarMensagem(vstParam2[0].stMenu.szTexto1);
+
+                                    if(converterPWDAT(vstParam2[0].bTipoDeDado) == MENU)
+                                        szTexto1Z = tratarMsgADMIN(szTexto1Z);
+
+                                    System.out.println(szTexto1Z);
+
+                                    if(vstParam2[0].bTipoDeDado == 13) {
+                                        System.out.println("Saindo do fluxo pelo RemoveCard");
+                                        System.out.println("iPPRemoveCard: " + ChamarFuncoes.chamarPW_iPPRemoveCard());
+                                        break;
+                                    }
+
+                                    scan = new Scanner(System.in);
+                                    String entradaZ = scan.nextLine();
+
+                                    if(Character.isDigit(entradaZ.charAt(0)))
+                                        entradaZ = Integer.toString(Integer.parseInt(entradaZ) + 1);
+
+                                    System.out.println("Add Param: " + ChamarFuncoes.chamarPW_iAddParam(
+                                            converterPWINFO(vstParam2[0].wIdentificador), entradaZ)); //Adicionando parametros
+
+                                } while(pwret == MOREDATA);
+
+                                pszData = new byte[1000];
+                                pwret = ChamarFuncoes.chamarPW_iGetResult(PWINFO.RESULTMSG.getValor(), pszData, 1000);
+                                System.out.println("iGetResult: " + pwret.toString());
+                                String retornoFinalMANUT = formatarMensagem(pszData);
+                                System.out.println(retornoFinalMANUT);
+                                break;
+
+                            case 3: //VERSAO
+                                System.out.println("New Transac: " + ChamarFuncoes.chamarPW_iNewTransac(PWOPER.VERSION)); //New Transac
+                                System.out.println("Mandatory Params: " + ChamarFuncoes.addMandatoryParams()); //Adicionando parametros mandatórios
+                                System.out.println("\nExec Transac: " + ChamarFuncoes.chamarPW_iExecTransac(vstParam2, iNumParam)); //Exec Transac);
+
+                                pszData = new byte[1000];
+                                pwret = ChamarFuncoes.chamarPW_iGetResult(PWINFO.RESULTMSG.getValor(), pszData, 1000);
+                                System.out.println("iGetResult: " + pwret + "\n\n");
+
+                                retornoFinal = formatarMensagem(pszData);
+                                System.out.println(retornoFinal + "\n\n");
+                                break;
+                        }
+
+                    } while(opcoesADM < 4);
 
                 case 1:
                     System.out.println("implementar");
@@ -180,10 +246,15 @@ public class Principal {
 
     private static String tratarMsgADMIN(String msgADMIN){
         String [] array = msgADMIN.split(" ");
+        String retorno = "";
 
         for(int i = 0; i < array.length; i++){
-            array[i] = i +" "+ array[i];
+            array[i] = i +" "+ array[i] + "\n";
         }
-        return array[0] +"\n"+ array[1] +"\n"+ array[2] +"\n"+ array[3];
+        for ( String linha : array) {
+            retorno += linha;
+        }
+
+        return retorno;
     }
 }
