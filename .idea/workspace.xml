@@ -1,36 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f495cf74-1df6-4728-be88-75357cb6ce21" name="Default" comment="Mudança estrutural no fonte para OO">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/check.pos" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/file50.pos" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Log/comms_190201.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PGWebLib.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PGWebLib.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PGWebLib.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PGWebLibTest.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PWL_Type.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/certificado.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Transacao.java" afterDir="false" />
+    <list default="true" id="f495cf74-1df6-4728-be88-75357cb6ce21" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChamarFuncoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChamarFuncoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Enums/PWINFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enums/PWINFO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.so" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLibTest.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLibTest.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Estruturas/PW_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Estruturas/PW_Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LibIntegrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LibIntegrada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ChamarFuncoes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ChamarFuncoes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Enums/PWINFO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Enums/PWINFO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Estruturas/PW_Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Estruturas/PW_Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/InterfaceComPGWebLib.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Interfaces/InterfaceComPGWebLib.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LibIntegrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LibIntegrada.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Principal.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Principal.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Principal.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="375">
               <caret line="223" column="46" selection-start-line="223" selection-start-column="46" selection-end-line="223" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -94,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Transacao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Transacao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Transacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="-30">
               <caret line="216" column="10" selection-start-line="216" selection-start-column="10" selection-end-line="216" selection-end-column="10" />
               <folding>
                 <element signature="e#2598#2599#0" expanded="true" />
@@ -105,6 +78,15 @@
                 <element signature="e#2707#2708#0" expanded="true" />
                 <element signature="e#2772#2773#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterfaceComPGWebLib.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -187,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Estruturas/PW_GetData.java" />
         <option value="$PROJECT_DIR$/src/main/java/Transacao.java" />
         <option value="$PROJECT_DIR$/.gitignore.gitignore" />
+        <option value="$PROJECT_DIR$/gitignore" />
       </list>
     </option>
   </component>
@@ -247,6 +230,22 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="PGWebLib_WinDLL64_04.00.50.00_TEST" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automacao_PGWebLibC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automacao_PGWebLibC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Estruturas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automacao_PGWebLibC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automacao_PGWebLibC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -403,13 +402,20 @@
       <option name="project" value="LOCAL" />
       <updated>1545437022417</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Mudança estrutural no fonte para OO">
+      <created>1549035241148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1549035241148</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="215000" />
   </component>
-  <component name="TodoView" selected-index="5">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -494,13 +500,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.0.0/jna-5.0.0.jar!/com/sun/jna/Memory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="195" selection-start-line="195" selection-end-line="195" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Estruturas/StringByReference.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Essenciais/PWL_Type.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -604,13 +603,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Log/comms_181210.log" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Log/comms_181213.log" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jrt:///usr/lib/jvm/default-java!/java.base/java/lang/AbstractStringBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -663,6 +655,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
           <caret line="128" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="e#2635#2636#0" expanded="true" />
+            <element signature="e#2668#2669#0" expanded="true" />
+            <element signature="e#2763#2764#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -709,28 +706,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="223" column="46" selection-start-line="223" selection-start-column="46" selection-end-line="223" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Transacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="-30">
           <caret line="216" column="10" selection-start-line="216" selection-start-column="10" selection-end-line="216" selection-end-column="10" />
           <folding>
             <element signature="e#2598#2599#0" expanded="true" />
             <element signature="e#2664#2665#0" expanded="true" />
             <element signature="e#2707#2708#0" expanded="true" />
             <element signature="e#2772#2773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="100" column="25" lean-forward="true" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="223" column="46" selection-start-line="223" selection-start-column="46" selection-end-line="223" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

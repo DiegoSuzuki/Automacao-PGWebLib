@@ -221,7 +221,7 @@ public class Principal {
 
     }
 
-    static void mostrarDadosDaTransacao(Transacao transac){
+    private static void  mostrarDadosDaTransacao(Transacao transac){
         if(transac.getInumParam() != 10) {
             System.out.println("Dados da Transação\n=========================================================\n"
                     + transac + " \n=========================================================\n");
