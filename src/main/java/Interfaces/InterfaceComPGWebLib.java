@@ -13,6 +13,8 @@ public interface InterfaceComPGWebLib extends Library {
 
     short PW_iExecTransac (PW_GetData [] vstParam, ShortByReference iNumParam );
 
+    short PW_iPPDisplay (String pszMsg);
+
     short PW_iGetResult (int iInfo, byte [] pszData, int ulDataSize);
 
     short PW_iPPEventLoop (byte [] szDspMdg, int ulDisplaySize);

@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f495cf74-1df6-4728-be88-75357cb6ce21" name="Default" comment="">
+    <list default="true" id="f495cf74-1df6-4728-be88-75357cb6ce21" name="Default" comment="Mudança estrutural no fonte para OO">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/check.pos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/file50.pos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Log/comms_190201.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PGWebLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PGWebLib.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PGWebLib.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PGWebLibTest.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/PWL_Type.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib_WinDLL64_04.00.50.00_TEST/certificado.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Transacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/check.pos" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/file50.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ChamarFuncoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChamarFuncoes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Enums/PWINFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enums/PWINFO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Enums/PWOPER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enums/PWOPER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.so" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLib.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLibTest.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Essenciais/PGWebLibTest.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Estruturas/PW_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Estruturas/PW_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LibIntegrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LibIntegrada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ChamarFuncoes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ChamarFuncoes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Enums/PWINFO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Enums/PWINFO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Enums/PWOPER.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Enums/PWOPER.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Estruturas/PW_Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Estruturas/PW_Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/InterfaceComPGWebLib.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Interfaces/InterfaceComPGWebLib.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LibIntegrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LibIntegrada.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Principal.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="Data/" />
+    <ignored path="Log/" />
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,11 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Principal.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Principal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="183" selection-start-line="183" selection-end-line="183" />
+            <state relative-caret-position="270">
+              <caret line="223" column="46" selection-start-line="223" selection-start-column="46" selection-end-line="223" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,8 +67,8 @@
       <file leaf-file-name="LibIntegrada.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/LibIntegrada.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="135">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,81 +79,32 @@
       <file leaf-file-name="ChamarFuncoes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ChamarFuncoes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PWRET.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Enums/PWRET.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
-              <folding>
-                <element signature="e#2635#2636#0" expanded="true" />
-                <element signature="e#2668#2669#0" expanded="true" />
-                <element signature="e#2763#2764#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PWOPER.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Enums/PWOPER.java">
+      <file leaf-file-name="PW_GetData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Estruturas/PW_GetData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transacao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Transacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="216" column="10" selection-start-line="216" selection-start-column="10" selection-end-line="216" selection-end-column="10" />
               <folding>
-                <element signature="e#208#209#0" expanded="true" />
-                <element signature="e#241#242#0" expanded="true" />
+                <element signature="e#2598#2599#0" expanded="true" />
+                <element signature="e#2664#2665#0" expanded="true" />
+                <element signature="e#2707#2708#0" expanded="true" />
+                <element signature="e#2772#2773#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PWDAT.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Enums/PWDAT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#495#496#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PWINFO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Enums/PWINFO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-              <folding>
-                <element signature="e#2584#2585#0" expanded="true" />
-                <element signature="e#2617#2618#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comms_181221.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Essenciais/Log/comms_181221.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="116" column="19" lean-forward="true" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comms_181221.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Log/comms_181221.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3806">
-              <caret line="346" lean-forward="true" selection-start-line="346" selection-end-line="346" />
             </state>
           </provider>
         </entry>
@@ -147,7 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>StringByReference1</find>
       <find>ByRe</find>
       <find>.ByReference</find>
       <find>int</find>
@@ -172,11 +145,12 @@
       <find>89</find>
       <find>45</find>
       <find>toString()</find>
-      <find>41</find>
       <find>StringByReference</find>
       <find>32522</find>
       <find>AUT</find>
       <find>AUTEXTREF</find>
+      <find>41</find>
+      <find>256</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -201,16 +175,18 @@
         <option value="$PROJECT_DIR$/src/main/java/PWL_Type.h" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Utilidades/ConverterPWINFO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Estruturas/PW_Menu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Estruturas/PW_GetData.java" />
         <option value="$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java" />
         <option value="$PROJECT_DIR$/src/main/java/Enums/PWRET.java" />
         <option value="$PROJECT_DIR$/src/main/java/Aux/LibIntegrada.java" />
-        <option value="$PROJECT_DIR$/src/main/java/LibIntegrada.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChamarFuncoes.java" />
         <option value="$PROJECT_DIR$/src/main/java/Enums/PWOPER.java" />
         <option value="$PROJECT_DIR$/src/main/java/Enums/PWINFO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/LibIntegrada.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Estruturas/PW_Menu.java" />
         <option value="$PROJECT_DIR$/src/main/java/Principal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Estruturas/PW_GetData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Transacao.java" />
+        <option value="$PROJECT_DIR$/.gitignore.gitignore" />
       </list>
     </option>
   </component>
@@ -234,9 +210,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,11 +225,6 @@
             <path>
               <item name="Automacao_PGWebLibC" type="b2602c69:ProjectViewProjectNode" />
               <item name="Automacao_PGWebLibC" type="462c0819:PsiDirectoryNode" />
-              <item name="Log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Automacao_PGWebLibC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automacao_PGWebLibC" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -273,26 +246,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Log" type="462c0819:PsiDirectoryNode" />
+              <item name="PGWebLib_WinDLL64_04.00.50.00_TEST" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/PDVS_PGWeb_v2.0.0.3/Automaç╞o de Demo (PDVS PGWeb) - Projeto C-Sharp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -325,6 +297,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Principal" />
       <module name="Automacao_PGWebLibC" />
+      <option name="VM_PARAMETERS" value="-Xss2m" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -423,13 +396,20 @@
       <option name="project" value="LOCAL" />
       <updated>1544454671191</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Transação administrativa completa">
+      <created>1545437022417</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1545437022417</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="215000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -442,31 +422,31 @@
     <frame x="1411" y="25" width="1549" height="875" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49966735" weight="0.66172504" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4101346" weight="0.6994609" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49966735" visible="true" weight="0.40296495" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4101346" weight="0.32884097" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.48456058" side_tool="true" weight="0.5541601" />
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.32801065" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.51543945" visible="true" weight="0.33153638" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49966735" weight="0.32884097" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.51543945" weight="1.0" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3180593" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4973046" visible="true" weight="0.1330672" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4973046" side_tool="true" visible="true" weight="0.247505" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.499002" weight="0.32884097" />
       <window_info id="Structure" order="0" sideWeight="0.5019685" side_tool="true" weight="0.34264803" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.249501" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.45687333" />
       <window_info id="Favorites" order="5" sideWeight="0.50269544" side_tool="true" weight="0.16699934" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.45956874" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32858273" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Maven" order="8" />
@@ -485,7 +465,9 @@
     <MESSAGE value="Teste PGWebLib Ubuntu" />
     <MESSAGE value="Error java: free invalid pointer" />
     <MESSAGE value="Instalação Ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="Instalação Ok" />
+    <MESSAGE value="Transação administrativa completa" />
+    <MESSAGE value="Mudança estrutural no fonte para OO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudança estrutural no fonte para OO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,20 +483,17 @@
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Principal.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="33" />
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.0.0/jna-5.0.0.jar!/com/sun/jna/Function.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Interfaces/EstruturaPW_GetData.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/AcessoEstrutura.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.0.0/jna-5.0.0.jar!/com/sun/jna/Memory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -625,24 +604,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Log/comms_181210.log" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Log/comms_181213.log" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Estruturas/PW_Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Interfaces/InterfaceComPGWebLib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Estruturas/PW_GetData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -674,43 +639,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Essenciais/Log/comms_181219.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Essenciais/Log/comms_181219.log" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Enums/PWOPER.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Enums/PWRET.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="e#2635#2636#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2763#2764#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChamarFuncoes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -724,47 +657,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LibIntegrada.java">
+    <entry file="file://$PROJECT_DIR$/Log/comms_181221.log" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Essenciais/Log/comms_181221.log" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Enums/PWRET.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1500">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Enums/PWINFO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="540">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Estruturas/PW_Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="77" column="46" lean-forward="true" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/comms_190130.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5673" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChamarFuncoes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LibIntegrada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="e#2584#2585#0" expanded="true" />
-            <element signature="e#2617#2618#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Log/comms_181221.log">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Estruturas/PW_GetData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3806">
-          <caret line="346" lean-forward="true" selection-start-line="346" selection-end-line="346" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Essenciais/Log/comms_181221.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="116" column="19" lean-forward="true" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
+        <state relative-caret-position="105">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        <state relative-caret-position="270">
+          <caret line="223" column="46" selection-start-line="223" selection-start-column="46" selection-end-line="223" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Transacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="216" column="10" selection-start-line="216" selection-start-column="10" selection-end-line="216" selection-end-column="10" />
+          <folding>
+            <element signature="e#2598#2599#0" expanded="true" />
+            <element signature="e#2664#2665#0" expanded="true" />
+            <element signature="e#2707#2708#0" expanded="true" />
+            <element signature="e#2772#2773#0" expanded="true" />
           </folding>
         </state>
       </provider>

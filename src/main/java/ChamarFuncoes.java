@@ -4,9 +4,6 @@ import Enums.PWRET;
 import Estruturas.PW_GetData;
 import com.sun.jna.ptr.ShortByReference;
 
-import static Enums.PWRET.*;
-
-
 public class ChamarFuncoes {
 
     static private LibIntegrada libIntegrada = new LibIntegrada();
@@ -50,9 +47,14 @@ public class ChamarFuncoes {
         return convertPWRET(pwRemoveCard);
     }
 
-    public static PWRET chamarPW_iGetResult (int iInfo, byte [] pszData, int ulDataSize) {
+    public static PWRET chamarPW_iGetResult (PWINFO iInfo, byte [] pszData, int ulDataSize) {
         short pwGetResult = libIntegrada.chamarPW_iGetResult(iInfo,pszData,ulDataSize);
         return convertPWRET(pwGetResult);
+    }
+
+    public static PWRET chamarPW_iPPDisplay (String pszMsg) {
+       short pwDisplay = libIntegrada.chamarPW_iPPDisplay(pszMsg);
+       return convertPWRET(pwDisplay);
     }
 
 
@@ -60,15 +62,15 @@ public class ChamarFuncoes {
 
     public static PWRET addMandatoryParams(){
         PWRET pwret = chamarPW_iAddParam(PWINFO.AUTDEV,"SETIS AUTOMACAO E SISTEMA LTDA");
-        if(pwret != OK)
+        if(pwret != PWRET.OK)
             return pwret;
 
         pwret = chamarPW_iAddParam(PWINFO.AUTVER,"1.1.0.0");
-        if(pwret != OK)
+        if(pwret != PWRET.OK)
             return pwret;
 
         pwret = chamarPW_iAddParam(PWINFO.AUTNAME,"PGWEBLIBTEST");
-        if(pwret != OK)
+        if(pwret != PWRET.OK)
             return pwret;
 
         pwret = chamarPW_iAddParam(PWINFO.AUTCAP,"15");

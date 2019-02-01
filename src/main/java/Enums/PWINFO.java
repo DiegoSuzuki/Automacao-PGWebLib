@@ -107,8 +107,8 @@ public enum PWINFO {
     DIALPREFIX ((short)0x7F11),
     DIALWAITTIME ((short)0x7F12),
     MODSPEED ((short)0x7F13),
-    TPDU ((short)0x7F14);
-
+    TPDU ((short)0x7F14),
+    STATUS((short)0x6F); // criado por mim
     private int valor;
 
     PWINFO(int valor){
