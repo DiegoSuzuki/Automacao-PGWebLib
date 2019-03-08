@@ -20,4 +20,19 @@ public interface InterfaceComPGWebLib extends Library {
     short PW_iPPEventLoop (byte [] szDspMdg, int ulDisplaySize);
 
     short PW_iPPRemoveCard ();
+
+    short PW_iPPAbort ();
+
+    short PW_iPPGetCard (short uiIndex);
+
+    short PW_iPPGoOnChip (short uiIndex);
+
+    short PW_iPPFinishChip (short uiIndex);
+
+    short PW_iConfirmation ( int ulStatus, String pszReqNum, String pszLocRef,
+                             String pszExtRef, String pszVirtMerch, String pszAuthSyst);
+
+    short PW_iIdleProc ();
+
+    short PW_iPPDataConfirmation (short uiIndex);
 }

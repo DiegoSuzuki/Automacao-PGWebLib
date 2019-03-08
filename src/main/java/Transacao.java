@@ -1,17 +1,11 @@
-import Enums.PWDAT;
-import Enums.PWINFO;
-import Enums.PWOPER;
-import Enums.PWRET;
+import Enums.*;
 import Estruturas.PW_GetData;
-import Estruturas.PW_Menu;
 import com.sun.jna.ptr.ShortByReference;
-
 import java.lang.reflect.Field;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Transacao {
-
     private PWOPER oper = null;
     private final ShortByReference iNumParam;
     private PW_GetData [] vstParam;
@@ -20,10 +14,11 @@ public class Transacao {
     public Transacao() {
         this.iNumParam = new ShortByReference((short)10);
         this.vstParam =  (PW_GetData[]) new PW_GetData().toArray(iNumParam.getValue());
-        this.szDspMsg = new byte[100];
+        this.szDspMsg = new byte[128];
         this.pszData  = new byte[1000];
     }
 
+    //FUNCOES NATIVAS
     public PWRET newTransac(PWOPER oper){
         this.oper = oper;
         return ChamarFuncoes.chamarPW_iNewTransac(oper);
@@ -43,41 +38,53 @@ public class Transacao {
         return ChamarFuncoes.chamarPW_iExecTransac(vstParam, iNumParam);
     }
 
-    public PWRET ippDisplay( String pszMgs){
-        return ChamarFuncoes.chamarPW_iPPDisplay(pszMgs);
-    }
-
     public PWRET ippEventLoop() throws InterruptedException {
-        Thread.sleep(100);
-        return ChamarFuncoes.chamarPW_iPPEventLoop(szDspMsg, 100);
+        Thread.sleep(500);
+        return ChamarFuncoes.chamarPW_iPPEventLoop(szDspMsg, szDspMsg.length);
     }
 
     public PWRET removeCard(){
         return ChamarFuncoes.chamarPW_iPPRemoveCard();
     }
+
+    public PWRET Abort(){ return ChamarFuncoes.chamarPW_iPPAbort (); }
+
     public  PWRET getResult(PWINFO param){
         this.pszData = new byte[1000];
         return ChamarFuncoes.chamarPW_iGetResult(param, pszData, 1000);
     }
 
+    public PWRET ippGetCard(int indiceVstParam){
+        return ChamarFuncoes.chamarPW_iPPGetCard((short) indiceVstParam);
+    }
+
+    public PWRET ippGoOnChip(int indiceVstParam){
+        return ChamarFuncoes.chamarPW_iPPGoOnChip((short) indiceVstParam);
+    }
+
+    public PWRET ippFinishChip(int indiceVstParam){ return ChamarFuncoes.chamarPW_iPPFinishChip((short) indiceVstParam); }
+
+    public PWRET ippConfirmation(PWCNF ulSatus,String pszReqNum, String pszLocRef, String pszExtRef,
+                                 String pszVirtMerch, String pszAuthSyst){
+        return ChamarFuncoes.chamarPW_iConfirmation(ulSatus, pszReqNum, pszLocRef, pszExtRef, pszVirtMerch, pszAuthSyst);
+    }
+
+    public PWRET ippDataConfirmation(int indiceVstParam){
+        return ChamarFuncoes.chamarPW_iPPDataConfirmation((short) indiceVstParam);
+    }
+
+
     //GETS
-    public PW_GetData getVstParam(int index){
-        return vstParam[index];
+    public PWOPER getOper() { return oper; }
+
+    public String getPszData(boolean formatarMensagem){
+        if(formatarMensagem)
+            return correcaoMensagem(pszData);
+        else
+            return new String (pszData);
     }
 
-    public PW_GetData[] getVstParamAll(){
-        return vstParam;
-    }
-
-    public String getPszData(boolean formatada){
-        if(formatada)
-            return formatarMensagem(pszData);
-        return new String(pszData);
-    }
-
-    public String getsZDspMsg(){
-            return formatarMensagem(szDspMsg).replace(" ","\n");
-    }
+    public String getsZDspMsg(){ return correcaoMensagem(szDspMsg); }
 
     public short getInumParam(){
         return iNumParam.getValue();
@@ -89,8 +96,8 @@ public class Transacao {
     }
 
 
-    //GETS PARAMENTROS Do VETOR
-    public PWINFO getWIdentificador(int index){
+    //GETS PARAMENTROS DO VETOR
+    public PWINFO getWidentificador(int index){
         return converterPWINFO(vstParam[index].wIdentificador);
     }
 
@@ -98,65 +105,63 @@ public class Transacao {
         return converterPWDAT(vstParam[index].bTipoDeDado);
     }
 
-    public String getSzPrompt(int index){
-        return formatarMensagem(vstParam[index].szPrompt);
-    }
+    public String getSzPrompt(int index){ return correcaoMensagem(vstParam[index].szPrompt); }
 
     public int getBnumOpcoes(int index){
         return vstParam[index].bNumOpcoesMenu;
     }
 
     public String getSzMascaraDeCaptura(int index){
-        return formatarMensagem(vstParam[index].szMascaraDeCaptura);
+        return correcaoMensagem(vstParam[index].szMascaraDeCaptura);
     }
 
-    public int getBtipoEntradaPermitidos(int index){
+    public byte getBtipoEntradaPermitidos(int index){
         return vstParam[index].bTiposEntradaPermitidos;
     }
 
-    public int getBtamanhoMinimo(int index) { return vstParam[index].bTamanhoMinimo; }
+    public byte getBtamanhoMinimo(int index) { return vstParam[index].bTamanhoMinimo; }
 
-    public int getBtamanhoMaximo(int index) { return vstParam[index].bTamanhoMaximo; }
+    public byte getBtamanhoMaximo(int index) { return vstParam[index].bTamanhoMaximo; }
 
     public int getUlValorMinimo(int index) { return vstParam[index].ulValorMinimo; }
 
     public int getUlValorMaximo(int index) { return vstParam[index].ulValorMaximo; }
 
-    public int getBocultarDadosDigitados(int index) { return vstParam[index].bOcultarDadosDigitados; }
+    public byte getBocultarDadosDigitados(int index) { return vstParam[index].bOcultarDadosDigitados; }
 
-    public int getBvalidacaoDado(int index) { return vstParam[index].bValidacaoDado; }
+    public byte getBvalidacaoDado(int index) { return vstParam[index].bValidacaoDado; }
 
-    public int getBaceitaNulo(int index) { return vstParam[index].bAceitaNulo; }
+    public byte getBaceitaNulo(int index) { return vstParam[index].bAceitaNulo; }
 
-    public String getSzValorInicial(int index) { return formatarMensagem(vstParam[index].szValorInicial); }
+    public String getSzValorInicial(int index) { return correcaoMensagem(vstParam[index].szValorInicial); }
 
-    public int getBteclasDeAtalho(int index) { return vstParam[index].bTeclasDeAtalho; }
+    public byte getBteclasDeAtalho(int index) { return vstParam[index].bTeclasDeAtalho; }
 
-    public String getSzMsgValidacao(int index) { return formatarMensagem(vstParam[index].szMsgValidacao); }
+    public String getSzMsgValidacao(int index) { return correcaoMensagem(vstParam[index].szMsgValidacao); }
 
-    public String getSzMsgConfirmacao(int index) { return formatarMensagem(vstParam[index].szMsgConfirmacao); }
+    public String getSzMsgConfirmacao(int index) { return correcaoMensagem(vstParam[index].szMsgConfirmacao); }
 
-    public String getSzMsgDadoMaior(int index) { return formatarMensagem(vstParam[index].szMsgDadoMaior); }
+    public String getSzMsgDadoMaior(int index) { return correcaoMensagem(vstParam[index].szMsgDadoMaior); }
 
-    public String getSzMsgDadoMenor(int index) { return formatarMensagem(vstParam[index].szMsgDadoMenor); }
+    public String getSzMsgDadoMenor(int index) { return correcaoMensagem(vstParam[index].szMsgDadoMenor); }
 
-    public int getBcapturarDataVencCartao(int index) { return vstParam[index].bCapturarDataVencCartao; }
+    public byte getBcapturarDataVencCartao(int index) { return vstParam[index].bCapturarDataVencCartao; }
 
     public int getUlTipoEntradaCartao(int index) { return vstParam[index].ulTipoEntradaCartao; }
 
-    public int getBitemInicial(int index) { return vstParam[index].bItemInicial; }
+    public byte getBitemInicial(int index) { return vstParam[index].bItemInicial; }
 
-    public int getBnumeroCapturas(int index) { return vstParam[index].bNumeroCapturas; }
+    public byte getBnumeroCapturas(int index) { return vstParam[index].bNumeroCapturas; }
 
-    public String getSzMsgPrevia(int index) { return formatarMensagem(vstParam[index].szMsgPrevia); }
+    public String getSzMsgPrevia(int index) { return correcaoMensagem(vstParam[index].szMsgPrevia); }
 
-    public int getBtipoEntradaCodigoBarras(int index) { return vstParam[index].bTipoEntradaCodigoBarras; }
+    public byte getBtipoEntradaCodigoBarras(int index) { return vstParam[index].bTipoEntradaCodigoBarras; }
 
-    public int getBomiteMsgAlerta(int index) { return vstParam[index].bOmiteMsgAlerta; }
+    public byte getBomiteMsgAlerta(int index) { return vstParam[index].bOmiteMsgAlerta; }
 
-    public int getBiniciaPelaEsquerda(int index) { return vstParam[index].bIniciaPelaEsquerda; }
+    public byte getBiniciaPelaEsquerda(int index) { return vstParam[index].bIniciaPelaEsquerda; }
 
-    public int getBnotificarCancelamento(int index) { return vstParam[index].bNotificarCancelamento; }
+    public byte getBnotificarCancelamento(int index) { return vstParam[index].bNotificarCancelamento; }
 
 
     //OBTENDO UM VETOR COM A QUANTIDADE DE MENUS PREENCHIDOS
@@ -191,7 +196,7 @@ public class Transacao {
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
-            getdata += "wIdwntificador = " + getWIdentificador(i) + "\n"
+            getdata += "wIdwntificador = " + getWidentificador(i) + "\n"
                     + "bTipoDeDaDo  = " + getBtipoDeDado(i) + "\n"
                     + "szPrompt  = " +  getSzPrompt(i) + "\n"
                     + "bNumOpcoesMenu = " + getBnumOpcoes(i) + "\n"
@@ -224,15 +229,15 @@ public class Transacao {
         return getdata;
     }
 
-    //Formata bytes em String
-    private String formatarMensagem(byte [] param) {
+    //Formatada bytes em String com correção de exibicao
+    private String correcaoMensagem(byte [] param) {
         String mensagem = new String (param); // transaformando array de bytes em string
         String mensagemFormatada = mensagem.replace('\0',' '); //substituindo byte vazio por espaços
 
         Pattern p = Pattern.compile("\\s+"); // expressão para mais de um espaço
         Matcher m = p.matcher(mensagemFormatada);
-
-        return m.replaceAll(" ");
+        mensagem = m.replaceAll(" ");
+        return mensagem.substring(0,mensagem.length()-1);
     }
 
     //Conversores

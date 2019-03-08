@@ -1,3 +1,4 @@
+import Enums.PWCNF;
 import Enums.PWINFO;
 import Enums.PWOPER;
 import Enums.PWRET;
@@ -8,27 +9,18 @@ public class ChamarFuncoes {
 
     static private LibIntegrada libIntegrada = new LibIntegrada();
 
-    private static PWRET convertPWRET(short result){
-
-        for (PWRET pwret : PWRET.values()){
-            if(pwret.getValor() == result)
-                return pwret;
-        }
-        return null;
-    }
-
     public static PWRET chamarPW_iInit(String caminho){
         short pwInit = libIntegrada.chamarPW_iInit (caminho);
         return convertPWRET(pwInit);
     }
 
     public static PWRET chamarPW_iNewTransac(PWOPER tipoOperacao){
-        short pwNewTransac = libIntegrada.chamarPW_iNewTransac(tipoOperacao);
+        short pwNewTransac = libIntegrada.chamarPW_iNewTransac(tipoOperacao.getValor());
         return convertPWRET(pwNewTransac);
     }
 
     public static PWRET chamarPW_iAddParam(PWINFO wParam, String pszValue){
-        short pwAddParam = libIntegrada.chamarPW_iAddParam(wParam, pszValue);
+        short pwAddParam = libIntegrada.chamarPW_iAddParam(wParam.getValor(), pszValue);
         return convertPWRET(pwAddParam);
     }
 
@@ -47,8 +39,13 @@ public class ChamarFuncoes {
         return convertPWRET(pwRemoveCard);
     }
 
+    public static PWRET chamarPW_iPPAbort () {
+        short pwAbort = libIntegrada.chamarPW_iPPAbort();
+        return convertPWRET(pwAbort);
+    }
+
     public static PWRET chamarPW_iGetResult (PWINFO iInfo, byte [] pszData, int ulDataSize) {
-        short pwGetResult = libIntegrada.chamarPW_iGetResult(iInfo,pszData,ulDataSize);
+        short pwGetResult = libIntegrada.chamarPW_iGetResult(iInfo.getValor(),pszData,ulDataSize);
         return convertPWRET(pwGetResult);
     }
 
@@ -57,9 +54,39 @@ public class ChamarFuncoes {
        return convertPWRET(pwDisplay);
     }
 
+    public static PWRET chamarPW_iPPGetCard (short uiIndex) {
+        short pwGetCard = libIntegrada.chamarPW_iPPGetCard(uiIndex);
+        return convertPWRET(pwGetCard);
+    }
+
+    public static PWRET chamarPW_iPPGoOnChip (short uiIndex) {
+        short pwGOnChip = libIntegrada.chamarPW_iPPGoOnChip(uiIndex);
+        return convertPWRET(pwGOnChip);
+    }
+
+    public static PWRET chamarPW_iPPFinishChip (short uiIndex) {
+        short pwFinishChip = libIntegrada.chamarPW_iPPFinishChip(uiIndex);
+        return convertPWRET(pwFinishChip);
+    }
+
+    public static PWRET chamarPW_iConfirmation(PWCNF ulStatus, String pszReqNum, String pszLocRef, String pszExtRef,
+                                               String pszVirtMerch, String pszAuthSyst) {
+        short pwConfirmation = libIntegrada.chamarPW_iConfirmation(ulStatus.getValor(), pszReqNum, pszLocRef,
+                pszExtRef, pszVirtMerch, pszAuthSyst);
+        return convertPWRET(pwConfirmation);
+    }
+
+    public static PWRET chamarPW_iIdleProc (){
+        short pwIdleProc = libIntegrada.chamarPW_iIdleProc();
+        return convertPWRET(pwIdleProc);
+    }
+
+    public static PWRET chamarPW_iPPDataConfirmation (short uiIndex) {
+        short pwDataConfirmation = libIntegrada.chamarPW_iPPDataConfirmation(uiIndex);
+        return convertPWRET(pwDataConfirmation);
+    }
 
     //metodo opcional, pode mandar um de cada vez se desejar
-
     public static PWRET addMandatoryParams(){
         PWRET pwret = chamarPW_iAddParam(PWINFO.AUTDEV,"SETIS AUTOMACAO E SISTEMA LTDA");
         if(pwret != PWRET.OK)
@@ -77,11 +104,14 @@ public class ChamarFuncoes {
         return pwret;
     }
 
-    public static PWRET iExecGetData(PW_GetData[] vstParam, ShortByReference iNumParam){
 
-        String szMsgPrevia = new String(vstParam[0].szMsgPrevia);
-        System.out.println(szMsgPrevia);
+    private static PWRET convertPWRET(short result){
 
+        for (PWRET pwret : PWRET.values()){
+            if(pwret.getValor() == result)
+                return pwret;
+        }
         return null;
     }
+
 }

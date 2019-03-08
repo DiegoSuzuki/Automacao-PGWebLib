@@ -89,6 +89,13 @@ public enum PWINFO {
     AUTHMNGTUSER (245),
     AUTHTECHUSER (246), //246
     PAYMNTTYPE ((short)0x1F21),
+    GRAPHICRCPHEADER((short)0x1F36),
+    GRAPHICRCPFOOTER((short)0x1F37),
+    CHOLDERNAME((short)0x1F38),
+    MERCHNAMEPDC((short)0x1F39),
+    TRANSACDESCRIPT((short)0x1F40),
+    ARQC((short)0x1F41),
+    DEFAULTCARDPARCPAN((short)0x1F42),
     USINGPINPAD (32513),
     PPCOMMPORT ((short)0x7F02),
     IDLEPROCTIME ((short)0x7F04),
@@ -109,13 +116,11 @@ public enum PWINFO {
     MODSPEED ((short)0x7F13),
     TPDU ((short)0x7F14),
     STATUS((short)0x6F); // criado por mim
+
     private int valor;
 
-    PWINFO(int valor){
-        this.valor = valor;
-    }
+    PWINFO(int valor){ this.valor = valor; }
 
-    public int getValor(){
-        return this.valor;
-    }
+    public int getValor(){ return this.valor; }
+
 }

@@ -120,6 +120,7 @@ public enum PWRET {
         this.valor = -1;
     }
 
+
     public short getValor(){
         return this.valor;
     }
